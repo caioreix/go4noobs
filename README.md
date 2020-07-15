@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/he4rt/4noobs" target="_blank">
-    <img src="./images/header.svg">
+    <img src="./images/4noobs_header.svg">
   </a>
 </p>
 
@@ -56,6 +56,6 @@ são **extremamente apreciadas**
 
 <p align="center">
   <a href="https://github.com/he4rt/4noobs" target="_blank">
-    <img src="./images/footer.svg" width="380">
+    <img src="./images/4noobs_footer.svg" width="380">
   </a>
 </p>
