@@ -33,7 +33,7 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 
 ## ROADMAP
 
-- COMING SOON
+- [Introdução](./modules/introducao.md)
 
 <!-- CONTRIBUTING -->
 
