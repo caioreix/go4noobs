@@ -35,6 +35,8 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 
 - [Introdução](./modules/introducao.md#introdução)
 
+- [Instalando](./modules/instalando.md#instalando)
+
 <!-- CONTRIBUTING -->
 
 ## Como Contribuir
