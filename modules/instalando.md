@@ -4,9 +4,9 @@
 
 ## Índice
 
-- [Requisitos](./instalando#requisitos)
+- [Requisitos](./instalando.md#requisitos)
 
-- [Downloads](./instalando#downloads)
+- [Downloads](./instalando.md#downloads)
 
 ## Requisitos
 
