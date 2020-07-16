@@ -4,7 +4,7 @@
 
 ## Índice
 
-- [O que é Go?]()
+- [O que é Go?](#o-que-é-go)
 
 - [Onde foi criada?]()
 
