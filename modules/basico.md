@@ -24,6 +24,20 @@
 
 	- [Função com retorno limpo](./basico.md#função-com-retorno-limpo)
 
+- [Variável](./basico.md#variável)
+
+	- [Variável simples](./basico.md#variável-simples)
+
+	- [Variáveis multiplas](./basico.md#variáveis-multiplas)
+
+	- [Variáveis com inicializadores](./basico.md#variáveis-com-inicializadores)
+
+	- [Variáveis curtas](./basico.md#variáveis-curtas)
+
+	- [Tipos básicos de variáveis](./basico.md#tipos-básicos-de-variáveis)
+
+	- [Variáveis com valores zero](./basico.md#variáveis-com-valores-zero)
+
 ## Pacotes
 
 Todo programa em Go é composto por pacotes.
@@ -92,6 +106,131 @@ func main(){
 ```
 
 Ao executar, irá gerar um erro durante a compilação na oitava linha devido à mesma estar iniciando com uma letra minúscula.
+
+## Variáveis
+
+### Variável simples
+
+A instrução ```var``` declara uma variavel o seu tipo é colocado apos seu nome que pode ou não ser atribuido um valor. 
+
+```go
+package main
+
+import "fmt"
+
+var name string
+
+func main() {
+	var age int = 19
+	name = "Caio"
+
+	fmt.Println(name, age, "anos")
+}
+```
+
+### Variáveis multiplas
+
+Quando uma variavel possui o mesmo tipo que outra, seu tipo pode ser omitido, com exceção da última.
+
+```go
+package main
+
+import "fmt"
+
+var firstName, lastName string
+
+func main() {
+	var age, cpf int
+
+	firstName = "Caio Alexandre"
+	lastName = "Reis de Almeida"
+	age = 19
+	cpf = 12345678912
+
+	fmt.Println(firstName, lastName, age, "anos / cpf:", cpf)
+}
+```
+
+### Variáveis com inicializadores
+
+Quando uma variavel possui um inicializador, não é necessário declarar seu tipo, pois ele é auto definido.
+
+```go
+package main
+
+import "fmt"
+
+var name, age, balance = "Caio Alexandre", 19, 1.99
+
+func main() {
+	fmt.Println(name, "de", age, "anos possui exatos R$", balance, "em sua conta!")
+}
+```
+
+### Variáveis curtas
+
+Esse tipo de declaração não necessita da instrução ```var``` apenas o uso da expressão ```:=```.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	name, age, balance := "Caio Alexandre", 19, 1.99
+
+	fmt.Println(name, "de", age, "anos possui exatos R$", balance, "em sua conta!")
+}
+```
+
+> Nota: declarações curtas não funcionam fora de funções, nesse caso é necessário o uso da isntrução ```var```
+
+### Tipos básicos de variáveis
+
+```go
+bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // pseudônimo para uint8
+
+rune // pseudônimo para int32
+     // representa um ponto de código Unicode
+
+float32 float64
+
+complex64 complex128
+```
+
+### Variáveis com valores zero
+
+Variáveis sem um inicializador são chamadas de variáveis zero.
+
+```go
+package main
+
+import "fmt"
+
+var name string  // Igual a "" string vazia
+var age int      // Igual a 0
+var marryed bool // Igual a false
+
+func main() {
+
+	fmt.Println("Nome:", name, "Idade:", age, "Casado:", marryed)
+
+}
+```
+
+> ```0```  para tipos numéricos
+
+> ```""``` (string vazia) para strings
+
+> ```false``` para boleanos
+
 
 ## Funções
 
@@ -206,3 +345,5 @@ func main() {
 ```
 
 > Funções de retorno limpo apenas devem ser utilizadas em pequenas funções, seu uso em funções maiores podem dificultar na leitura do código.
+
+[← Pagina Inicial](../README.md#go4noobs)
