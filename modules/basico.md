@@ -10,6 +10,20 @@
 
 - [Exportação de nomes](./basico.md#exportação-de-nomes)
 
+- [Variáveis](./basico.md#variáveis)
+
+	- [Variável simples](./basico.md#variável-simples)
+
+	- [Variáveis multiplas](./basico.md#variáveis-multiplas)
+
+	- [Variáveis com inicializadores](./basico.md#variáveis-com-inicializadores)
+
+	- [Variáveis curtas](./basico.md#variáveis-curtas)
+
+	- [Tipos básicos de variáveis](./basico.md#tipos-básicos-de-variáveis)
+
+	- [Variáveis com valores zero](./basico.md#variáveis-com-valores-zero)
+
 - [Funções](./basico.md#funções)
 
 	- [Função sem argumentos](./basico.md#função-sem-argumentos)
@@ -23,20 +37,6 @@
 	- [Função com multiplos retornos](./basico.md#função-com-múltiplos-retornos)
 
 	- [Função com retorno limpo](./basico.md#função-com-retorno-limpo)
-
-- [Variável](./basico.md#variável)
-
-	- [Variável simples](./basico.md#variável-simples)
-
-	- [Variáveis multiplas](./basico.md#variáveis-multiplas)
-
-	- [Variáveis com inicializadores](./basico.md#variáveis-com-inicializadores)
-
-	- [Variáveis curtas](./basico.md#variáveis-curtas)
-
-	- [Tipos básicos de variáveis](./basico.md#tipos-básicos-de-variáveis)
-
-	- [Variáveis com valores zero](./basico.md#variáveis-com-valores-zero)
 
 ## Pacotes
 
