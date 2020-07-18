@@ -1,14 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
+import "fmt"
+
+const (
+	firstName, lastName = "Caio", "Almeida"
+	cpf                 = 12345678912
 )
 
 func main() {
 
-	number := 1.2
-
-	fmt.Println(reflect.TypeOf(number))
+	fmt.Println(firstName, lastName, "cpf:", cpf)
 
 }

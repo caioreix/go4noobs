@@ -24,6 +24,12 @@
 
 	- [Variáveis com valores zero](./basico.md#variáveis-com-valores-zero)
 
+- [Constantes](./basico.md#constantes)
+
+	- [Constante simples](./basico.md#constante-simples)
+
+  - [Constante consignada](./basico.md#constante-consignada)
+
 - [Funções](./basico.md#funções)
 
 	- [Função sem argumentos](./basico.md#função-sem-argumentos)
@@ -111,7 +117,7 @@ Ao executar, irá gerar um erro durante a compilação na oitava linha devido à
 
 ### Variável simples
 
-A instrução ```var``` declara uma variavel o seu tipo é colocado apos seu nome que pode ou não ser atribuido um valor. 
+A instrução ```var``` declara uma variável o seu tipo é colocado apos seu nome que pode ou não ser atribuído um valor. 
 
 ```go
 package main
@@ -128,9 +134,9 @@ func main() {
 }
 ```
 
-### Variáveis multiplas
+### Variáveis múltiplas
 
-Quando uma variavel possui o mesmo tipo que outra, seu tipo pode ser omitido, com exceção da última.
+Quando uma variável possui o mesmo tipo que outra, seu tipo pode ser omisso, com exceção da última.
 
 ```go
 package main
@@ -153,7 +159,7 @@ func main() {
 
 ### Variáveis com inicializadores
 
-Quando uma variavel possui um inicializador, não é necessário declarar seu tipo, pois ele é auto definido.
+Quando uma variável possui um inicializador, não é necessário declarar seu tipo, pois ele é auto definido.
 
 ```go
 package main
@@ -183,7 +189,7 @@ func main() {
 }
 ```
 
-> Nota: declarações curtas não funcionam fora de funções, nesse caso é necessário o uso da isntrução ```var```
+> Nota: declarações curtas não funcionam fora de funções, nesse caso é necessário o uso da instrução ```var```
 
 ### Tipos básicos de variáveis
 
@@ -231,6 +237,68 @@ func main() {
 
 > ```false``` para boleanos
 
+### Variáveis consignadas
+
+Da mesma forma que as importações as variáveis podem ser declaradas de forma consignada.
+
+```go
+package main
+
+import "fmt"
+
+var (
+	name string
+	age  = 19
+)
+
+func main() {
+	name = "Caio Alexandre"
+
+	fmt.Println(name, age, "anos")
+
+}
+```
+
+## Constantes
+
+### Constante simples
+
+Assim como as variáveis as constantes, precisão de uma instrução, mas com a palavra-chave ```const```.
+
+```go
+package main
+
+import "fmt"
+
+const name = "Caio Alexandre"
+
+func main() {
+
+	fmt.Println(name)
+
+}
+```
+
+### Constante consignada
+
+As constantes também podem ser declaradas de forma consignada.
+
+```go
+package main
+
+import "fmt"
+
+const (
+	firstName, lastName = "Caio", "Almeida"
+	cpf                 = 12345678912
+)
+
+func main() {
+
+	fmt.Println(firstName, lastName, "cpf:", cpf)
+
+}
+```
 
 ## Funções
 
