@@ -2,13 +2,12 @@ package main
 
 import "fmt"
 
-const (
-	firstName, lastName = "Caio", "Almeida"
-	cpf                 = 12345678912
-)
-
 func main() {
 
-	fmt.Println(firstName, lastName, "cpf:", cpf)
+	people := []string{"Caio", "paochapado", "abidinhs", "Vasco14pt"} // [home](./home)
+
+	for i, person := range people {
+		fmt.Println("index:", i, "value:", person)
+	}
 
 }

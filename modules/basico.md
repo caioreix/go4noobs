@@ -44,6 +44,26 @@
 
 	- [Função com retorno limpo](./basico.md#função-com-retorno-limpo)
 
+- [Condicionais](./basico.md#condicionais)
+
+	- [If](./basico.md#if)
+
+	- [If com declaração](./basico.md#if-com-declaração)
+
+	- [Else](./basico.md#else)
+
+	- [Else If](./basico.md#else-if)
+
+- [Loopings](./basico.md#loopings)
+
+	- [For	simples](./basico.md#for-simples)
+
+	- [While (for)](./basico.md#while-for)
+
+	- [Loop infinito](./basico.md#loop-infinito)
+
+	- [Foreach (range)](./basico.md#foreach-range)
+
 ## Pacotes
 
 Todo programa em Go é composto por pacotes.
@@ -415,3 +435,229 @@ func main() {
 > Funções de retorno limpo apenas devem ser utilizadas em pequenas funções, seu uso em funções maiores podem dificultar na leitura do código.
 
 [← Pagina Inicial](../README.md#go4noobs)
+
+## Condicionais
+
+### If
+
+Para fazer uma condicional if é necessário o uso da instrução ```if```.
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	x := rand.Intn(100)
+
+	fmt.Println("x =", x)
+
+	if x > 50 {
+		fmt.Println("x é maior que 50")
+	}
+
+}
+```
+
+> Diferente de outras linguagens como C, Java ou javascript, não há ```()``` parênteses rodeando os componentes do ```if``` mas as ```{}``` chaves são obrigatórias.
+
+### If com declaração
+
+A intrução ```if``` pode ter uma pequena declaração antes da condição. 
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	if y := randNumber(); y > 50 {
+		fmt.Println("y =", y)
+		fmt.Println("y é maior que 50")
+	}
+}
+
+func randNumber() (x int) {
+	rand.Seed(time.Now().UnixNano())
+	x = rand.Intn(100)
+
+	return
+}
+```
+
+> Variáveis declaradas dentro da intrução são válidas somente nesse escopo (até o final do ```if```, ```else if``` ou ```else```) 
+
+### Else
+
+A instrução ```else``` tem que ser chamada logo após o ```if``` ou ```else if```, caso contrário irá causar um erro.
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	x := rand.Intn(100)
+
+	fmt.Println("x =", x)
+
+	if x > 50 {
+		fmt.Println("x é maior que 50")
+	} else {
+		fmt.Println("x é menor que 50")
+	}
+
+}
+```
+
+### Else If
+
+Assim como o ```else``` a instrução ```else if``` também necessita iniciar após o fechamento de um ```if``` ou outro ```else if```.
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	x := rand.Intn(100)
+
+	fmt.Println("x =", x)
+
+	if x > 50 {
+		fmt.Println("x é maior que 50")
+	} else if x == 50 {
+		fmt.Println("x é igual a 50")
+	} else {
+		fmt.Println("x é menor que 50")
+	}
+
+}
+```
+
+## Loopings
+
+### For	simples
+
+Assim como na maioria das linguagens o looping ```for``` possui 3 componentes:
+
+- Instrução inicial (Executada antes da primeira interação)
+
+- Expressão da condição (Avaliada antes de cada interação)
+
+- Pós-instrução (executada depois de cada interação)
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
+
+}
+```
+
+> Diferente de outras linguagens como C, Java ou javascript, não há ```()``` parênteses rodeando os componentes do ```for``` mas as ```{}``` chaves são obrigatórias.
+
+### While (for)
+
+Em Go a Instrução inicial e a Pós-instrução são opcionais.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	i := 0
+	for i < 5 {
+		fmt.Println(i)
+		i++
+	}
+
+	for i := 0; i <= 10; {
+		fmt.Println(i)
+		i++
+	}
+
+}
+```
+
+> Nota: Em go existe apenas uma estrutura de looping o ```for``` mas elá é bem flexível podendo fazer qualquer um deles.
+
+### Loop infinito
+
+Caso a condição do ```for``` seja omissa, o looping se tornará infinito até que haja um ```break```.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	i := 0
+
+	for {
+		fmt.Println(i)
+		i++
+
+		if i == 10 {
+			break
+		}
+	}
+
+}
+```
+
+### Foreach (range)
+
+Em Go o foreach é feito com a instrução ```range```.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+	people := []string{"Caio", "paochapado", "abidinhs", "Vasco14pt"}
+
+	for i, person := range people {
+		fmt.Println("index:", i, "value:", person)
+	}
+
+}
+```
+
+> O ```range``` é utilizado por correr sobre um [array](./basico.md#array-simples) ou [slice](./basico#slice).
