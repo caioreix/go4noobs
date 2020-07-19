@@ -434,8 +434,6 @@ func main() {
 
 > Funções de retorno limpo apenas devem ser utilizadas em pequenas funções, seu uso em funções maiores podem dificultar na leitura do código.
 
-[← Pagina Inicial](../README.md#go4noobs)
-
 ## Condicionais
 
 ### If
@@ -660,4 +658,6 @@ func main() {
 }
 ```
 
-> O ```range``` é utilizado por correr sobre um [array](./basico.md#array-simples) ou [slice](./basico#slice).
+> O ```range``` é utilizado para correr sobre um [array](./basico.md#array-simples) ou [slice](./basico#slice).
+
+[← Pagina Inicial](../README.md#go4noobs)
