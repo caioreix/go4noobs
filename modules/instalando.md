@@ -4,7 +4,7 @@
 
 ## Índice
 
-- [Playground](./instalando.md#playgroud)
+- [Playground](./instalando.md#playground)
 
 - [Requisitos](./instalando.md#requisitos)
 
