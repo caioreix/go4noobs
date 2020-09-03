@@ -411,6 +411,24 @@ func main() {
 }
 ```
 
+Nas funções de múltiplo retorno, se não for necessário usar todos os valores retornados pela função, você pode usar o identificador `_`para evitar erros 
+de compilação.
+
+```go
+package main
+
+import "fmt"
+
+func sumAndSubCalc(x, y int) (int,int) {
+	return x + y,x-y
+}
+
+func main() {
+	_, sub := sumAndSubCalc(3,2)
+	fmt.Println(sub)
+}
+```
+
 ### Função com retorno limpo
 
 
