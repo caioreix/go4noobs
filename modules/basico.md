@@ -115,9 +115,9 @@ Entretanto, o mais recomendado é utilizar o estilo de importação consignada.
 
 ## Exportação de nomes
 
-As formas de tornar uma variável Global ou não em Go é feita pela forma que seu nome é escrito.
+As formas de tornar uma variável, constante ou função Global ou não em Go é feita pela forma que seu nome é escrito.
 
-Caso ele seja escrito com a primeira letra maiúscula poderá ser usada em qualquer outro pacote. Por outro lado, os que começam com a inicial minúscula poderá ser usado apenas dentro do pacote.
+Caso seja escrito com a primeira letra maiúscula poderá ser usada em qualquer outro pacote. Por outro lado, se o nome começa com a inicial minúscula poderá ser usado apenas dentro do pacote.
 
 ```go
 package main
