@@ -411,8 +411,7 @@ func main() {
 }
 ```
 
-Nas funções de múltiplo retorno, se não for necessário usar todos os valores retornados pela função, você pode usar o identificador `_`para evitar erros 
-de compilação.
+Nas funções de múltiplo retorno, se não for necessário usar todos os valores retornados pela função, você pode usar o identificador `_`para evitar erros de compilação.
 
 ```go
 package main
