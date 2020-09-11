@@ -597,9 +597,20 @@ func main() {
 
 Output:
 
+Caso "y" seja maior que 50
+
 ```bash
-x = 9
+y = 61
+y é maior que 50
 ```
+
+Ou
+
+```bash
+y = 9
+```
+
+> Os valores 61 e 9 são aleatórios!
 
 > Diferente de outras linguagens como C, Java ou javascript, não há ```()``` parênteses rodeando os componentes do ```if``` mas as ```{}``` chaves são obrigatórias.
 
