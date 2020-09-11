@@ -14,7 +14,7 @@
 
 	- [Variável simples](#variável-simples)
 
-	- [Variáveis multiplas](#variáveis-multiplas)
+	- [Variáveis múltiplas](#variáveis-múltiplas)
 
 	- [Variáveis com inicializadores](#variáveis-com-inicializadores)
 
@@ -40,7 +40,7 @@
 
 	- [Função com retorno](#função-com-retorno)
 
-	- [Função com multiplos retornos](#função-com-múltiplos-retornos)
+	- [Função com múltiplos retornos](#função-com-múltiplos-retornos)
 
 	- [Função com retorno limpo](#função-com-retorno-limpo)
 
@@ -56,7 +56,7 @@
 
 - [Loopings](#loopings)
 
-	- [For	simples](#for-simples)
+	- [For simples](#for-simples)
 
 	- [While (for)](#while-for)
 
@@ -554,7 +554,7 @@ func main() {
 
 ## Loopings
 
-### For	simples
+### For simples
 
 Assim como na maioria das linguagens o looping ```for``` possui 3 componentes:
 
