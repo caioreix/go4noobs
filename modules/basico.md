@@ -600,14 +600,14 @@ Output:
 Caso "y" seja maior que 50
 
 ```bash
-y = 61
-y é maior que 50
+x = 61
+x é maior que 50
 ```
 
 Ou
 
 ```bash
-y = 9
+x = 9
 ```
 
 > Os valores 61 e 9 são aleatórios!
