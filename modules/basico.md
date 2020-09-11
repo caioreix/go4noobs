@@ -4,65 +4,65 @@
 
 ## Índice
 
-- [Pacotes](./basico.md#pacotes)
+- [Pacotes](#pacotes)
 
-- [Importações](./basico.md#importações)
+- [Importações](#importações)
 
-- [Exportação de nomes](./basico.md#exportação-de-nomes)
+- [Exportação de nomes](#exportação-de-nomes)
 
-- [Variáveis](./basico.md#variáveis)
+- [Variáveis](#variáveis)
 
-	- [Variável simples](./basico.md#variável-simples)
+	- [Variável simples](#variável-simples)
 
-	- [Variáveis multiplas](./basico.md#variáveis-multiplas)
+	- [Variáveis multiplas](#variáveis-multiplas)
 
-	- [Variáveis com inicializadores](./basico.md#variáveis-com-inicializadores)
+	- [Variáveis com inicializadores](#variáveis-com-inicializadores)
 
-	- [Variáveis curtas](./basico.md#variáveis-curtas)
+	- [Variáveis curtas](#variáveis-curtas)
 
-	- [Tipos básicos de variáveis](./basico.md#tipos-básicos-de-variáveis)
+	- [Tipos básicos de variáveis](#tipos-básicos-de-variáveis)
 
-	- [Variáveis com valores zero](./basico.md#variáveis-com-valores-zero)
+	- [Variáveis com valores zero](#variáveis-com-valores-zero)
 
-- [Constantes](./basico.md#constantes)
+- [Constantes](#constantes)
 
-	- [Constante simples](./basico.md#constante-simples)
+	- [Constante simples](#constante-simples)
 
-  - [Constante consignada](./basico.md#constante-consignada)
+  - [Constante consignada](#constante-consignada)
 
-- [Funções](./basico.md#funções)
+- [Funções](#funções)
 
-	- [Função sem argumentos](./basico.md#função-sem-argumentos)
+	- [Função sem argumentos](#função-sem-argumentos)
 
-	- [Função com argumentos](./basico.md#função-com-argumentos)
+	- [Função com argumentos](#função-com-argumentos)
 
-	- [Função com tipos de argumentos iguais](./basico.md#função-com-tipos-de-argumentos-iguais)
+	- [Função com tipos de argumentos iguais](#função-com-tipos-de-argumentos-iguais)
 
-	- [Função com retorno](./basico.md#função-com-retorno)
+	- [Função com retorno](#função-com-retorno)
 
-	- [Função com multiplos retornos](./basico.md#função-com-múltiplos-retornos)
+	- [Função com multiplos retornos](#função-com-múltiplos-retornos)
 
-	- [Função com retorno limpo](./basico.md#função-com-retorno-limpo)
+	- [Função com retorno limpo](#função-com-retorno-limpo)
 
-- [Condicionais](./basico.md#condicionais)
+- [Condicionais](#condicionais)
 
-	- [If](./basico.md#if)
+	- [If](#if)
 
-	- [If com declaração](./basico.md#if-com-declaração)
+	- [If com declaração](#if-com-declaração)
 
-	- [Else](./basico.md#else)
+	- [Else](#else)
 
-	- [Else If](./basico.md#else-if)
+	- [Else If](#else-if)
 
-- [Loopings](./basico.md#loopings)
+- [Loopings](#loopings)
 
-	- [For	simples](./basico.md#for-simples)
+	- [For	simples](#for-simples)
 
-	- [While (for)](./basico.md#while-for)
+	- [While (for)](#while-for)
 
-	- [Loop infinito](./basico.md#loop-infinito)
+	- [Loop infinito](#loop-infinito)
 
-	- [Foreach (range)](./basico.md#foreach-range)
+	- [Foreach (range)](#foreach-range)
 
 ## Pacotes
 
@@ -658,6 +658,6 @@ func main() {
 }
 ```
 
-> O ```range``` é utilizado para correr sobre um [array](./basico.md#array-simples) ou [slice](./basico#slice).
+> O ```range``` é utilizado para correr sobre um [array](#array-simples) ou [slice](#slice).
 
 [← Pagina Inicial](../README.md#go4noobs)
