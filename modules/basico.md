@@ -4,71 +4,73 @@
 
 ## Índice
 
-- [Pacotes](./basico.md#pacotes)
+- [Pacotes](#pacotes)
 
-- [Importações](./basico.md#importações)
+- [Importações](#importações)
 
-- [Exportação de nomes](./basico.md#exportação-de-nomes)
+- [Exportação de nomes](#exportação-de-nomes)
 
-- [Variáveis](./basico.md#variáveis)
+- [Variáveis](#variáveis)
 
-	- [Variável simples](./basico.md#variável-simples)
+	- [Variável simples](#variável-simples)
 
-	- [Variáveis multiplas](./basico.md#variáveis-multiplas)
+	- [Variáveis múltiplas](#variáveis-múltiplas)
 
-	- [Variáveis com inicializadores](./basico.md#variáveis-com-inicializadores)
+	- [Variáveis com inicializadores](#variáveis-com-inicializadores)
 
-	- [Variáveis curtas](./basico.md#variáveis-curtas)
+	- [Variáveis curtas](#variáveis-curtas)
 
-	- [Tipos básicos de variáveis](./basico.md#tipos-básicos-de-variáveis)
+	- [Tipos básicos de variáveis](#tipos-básicos-de-variáveis)
 
-	- [Variáveis com valores zero](./basico.md#variáveis-com-valores-zero)
+	- [Variáveis com valores zero](#variáveis-com-valores-zero)
 
-- [Constantes](./basico.md#constantes)
+- [Constantes](#constantes)
 
-	- [Constante simples](./basico.md#constante-simples)
+	- [Constante simples](#constante-simples)
 
-  - [Constante consignada](./basico.md#constante-consignada)
+  - [Constante consignada](#constante-consignada)
 
-- [Funções](./basico.md#funções)
+- [Funções](#funções)
 
-	- [Função sem argumentos](./basico.md#função-sem-argumentos)
+	- [Função sem argumentos](#função-sem-argumentos)
 
-	- [Função com argumentos](./basico.md#função-com-argumentos)
+	- [Função com argumentos](#função-com-argumentos)
 
-	- [Função com tipos de argumentos iguais](./basico.md#função-com-tipos-de-argumentos-iguais)
+	- [Função com tipos de argumentos iguais](#função-com-tipos-de-argumentos-iguais)
 
-	- [Função com retorno](./basico.md#função-com-retorno)
+	- [Função com retorno](#função-com-retorno)
 
-	- [Função com multiplos retornos](./basico.md#função-com-múltiplos-retornos)
+	- [Função com múltiplos retornos](#função-com-múltiplos-retornos)
 
-	- [Função com retorno limpo](./basico.md#função-com-retorno-limpo)
+	- [Função com retorno limpo](#função-com-retorno-limpo)
 
-- [Condicionais](./basico.md#condicionais)
+- [Condicionais](#condicionais)
 
-	- [If](./basico.md#if)
+	- [If](#if)
 
-	- [If com declaração](./basico.md#if-com-declaração)
+	- [If com declaração](#if-com-declaração)
 
-	- [Else](./basico.md#else)
+	- [Else](#else)
 
-	- [Else If](./basico.md#else-if)
+	- [Else If](#else-if)
 
-- [Loopings](./basico.md#loopings)
+- [Loopings](#loopings)
 
-	- [For	simples](./basico.md#for-simples)
+	- [For simples](#for-simples)
 
-	- [While (for)](./basico.md#while-for)
+	- [While (for)](#while-for)
 
-	- [Loop infinito](./basico.md#loop-infinito)
+	- [Loop infinito](#loop-infinito)
 
-	- [Foreach (range)](./basico.md#foreach-range)
+	- [Foreach (range)](#foreach-range)
 
 ## Pacotes
 
 Todo programa em Go é composto por pacotes.
 
 O início de um programa é feito no pacote ```main```.
+
+Input:
 
 ```go
 package main
@@ -86,6 +88,14 @@ func main() {
 
 }
 ```
+
+Output:
+
+```bash
+Meu número da sorte é 42
+```
+
+> O número 42 é aleatório!
 
 O exemplo a cima está usando os pacotes com caminho de importação "```fmt```", "```math/rand```" e "```time```".
 
@@ -119,6 +129,8 @@ As formas de tornar uma variável, constante ou função Global ou não em Go é
 
 Caso seja escrito com a primeira letra maiúscula poderá ser usada em qualquer outro pacote. Por outro lado, se o nome começa com a inicial minúscula poderá ser usado apenas dentro do pacote.
 
+Input:
+
 ```go
 package main
 
@@ -131,6 +143,13 @@ func main(){
 }
 ```
 
+Output:
+
+```bash
+.\main.go:8:2: cannot refer to unexported name fmt.println
+.\main.go:8:2: undefined: fmt.println
+```
+
 Ao executar, irá gerar um erro durante a compilação na oitava linha devido à mesma estar iniciando com uma letra minúscula.
 
 ## Variáveis
@@ -138,6 +157,8 @@ Ao executar, irá gerar um erro durante a compilação na oitava linha devido à
 ### Variável simples
 
 A instrução ```var``` declara uma variável o seu tipo é colocado apos seu nome que pode ou não ser atribuído um valor. 
+
+Input:
 
 ```go
 package main
@@ -154,9 +175,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio 19 anos
+```
+
 ### Variáveis múltiplas
 
 Quando uma variável possui o mesmo tipo que outra, seu tipo pode ser omisso, com exceção da última.
+
+Input:
 
 ```go
 package main
@@ -177,9 +206,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Alexandre Reis de Almeida 19 anos / cpf: 12345678912
+```
+
 ### Variáveis com inicializadores
 
 Quando uma variável possui um inicializador, não é necessário declarar seu tipo, pois ele é auto definido.
+
+Input:
 
 ```go
 package main
@@ -193,9 +230,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Alexandre de 19 anos possui exatos R$ 1.99 em sua conta!
+```
+
 ### Variáveis curtas
 
 Esse tipo de declaração não necessita da instrução ```var``` apenas o uso da expressão ```:=```.
+
+Input:
 
 ```go
 package main
@@ -207,6 +252,12 @@ func main() {
 
 	fmt.Println(name, "de", age, "anos possui exatos R$", balance, "em sua conta!")
 }
+```
+
+Output:
+
+```bash
+Caio Alexandre de 19 anos possui exatos R$ 1.99 em sua conta!
 ```
 
 > Nota: declarações curtas não funcionam fora de funções, nesse caso é necessário o uso da instrução ```var```
@@ -235,6 +286,8 @@ complex64 complex128
 
 Variáveis sem um inicializador são chamadas de variáveis zero.
 
+Input:
+
 ```go
 package main
 
@@ -251,15 +304,23 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Nome:  Idade: 0 Casado: false
+```
+
 > ```0```  para tipos numéricos
-
+>
 > ```""``` (string vazia) para strings
-
+>
 > ```false``` para boleanos
 
 ### Variáveis consignadas
 
 Da mesma forma que as importações as variáveis podem ser declaradas de forma consignada.
+
+Input:
 
 ```go
 package main
@@ -279,11 +340,19 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Alexandre 19 anos
+```
+
 ## Constantes
 
 ### Constante simples
 
 Assim como as variáveis as constantes, precisão de uma instrução, mas com a palavra-chave ```const```.
+
+Input:
 
 ```go
 package main
@@ -299,9 +368,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Alexandre
+```
+
 ### Constante consignada
 
 As constantes também podem ser declaradas de forma consignada.
+
+Input:
 
 ```go
 package main
@@ -320,9 +397,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Almeida cpf: 12345678912
+```
+
 ## Funções
 
 ### Função sem argumentos
+
+Input:
 
 ```go
 package main
@@ -338,9 +423,17 @@ func main(){
 }
 ```
 
+Output:
+
+```bash
+Olá!
+```
+
 ### Função com argumentos
 
 Note que os tipos dos argumentos são colocados após as variáveis.
+
+Input:
 
 ```go
 package main
@@ -356,9 +449,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Alexandre Reis de Almeida
+```
+
 ### Função com tipos de argumentos iguais
 
 Quando variáveis compartilham o mesmo tipo as mesmas podem omitir seus tipos, com exceção da última.
+
+Input:
 
 ```go
 package main
@@ -374,9 +475,17 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+Caio Alexandre Reis de Almeida - 19 anos.
+```
+
 ### Função com retorno
 
 Para fazer uma função com retorno basta adicionar o tipo ao lado direito dos ```()```.
+
+Input:
 
 ```go
 package main
@@ -392,26 +501,40 @@ func main() {
 }
 ```
 
+Output:
+
+```bash
+5
+```
+
 ### Função com múltiplos retornos
 
 As funções podem ter inúmeros retornos, quando há mais de um é necessário colocá-los em ```()```
 
+Input:
+
 ```go
 package main
 
 import "fmt"
 
-func sumAndSubCalc(x, y int) (int,int) {
-	return x + y,x-y
+func sumAndSubCalc(x, y int) (int, int) {
+	return x + y, x - y
 }
 
 func main() {
-	sum, sub := sumAndSubCalc(3,2)
-	fmt.Println(sum,sub)
+	sum, sub := sumAndSubCalc(3, 2)
+	fmt.Println("Soma =", sum, "Subtração =", sub)
 }
 ```
 
-Nas funções de múltiplo retorno, se não for necessário usar todos os valores retornados pela função, você pode usar o identificador `_`para evitar erros de compilação.
+```bash
+Soma = 5 Subtração = 1
+```
+
+Nas funções de múltiplo retorno, se não for necessário usar todos os valores retornados pela função, você pode usar o identificador ```_``` para evitar erros de compilação.
+
+Input:
 
 ```go
 package main
@@ -419,13 +542,19 @@ package main
 import "fmt"
 
 func sumAndSubCalc(x, y int) (int,int) {
-	return x + y,x-y
+	return x + y, x - y
 }
 
 func main() {
 	_, sub := sumAndSubCalc(3,2)
-	fmt.Println(sub)
+	fmt.Println("Subtração =", sub)
 }
+```
+
+Output:
+
+```bash
+Subtração = 1
 ```
 
 ### Função com retorno limpo
@@ -433,20 +562,28 @@ func main() {
 
 As funções de retorno limpo agem como variáveis, e devem ser nomeadas para documentar o retorno.
 
+Input:
+
 ```go
 package main
 
 import "fmt"
 
-func split(value int) (x, y int) {
-	x = value * 4 / 9
-	y = value - x
+func invert(second, first int) (x, y int) {
+	y = second
+	x = first
 	return
 }
 
 func main() {
-	fmt.Println(split(17))
+	fmt.Println(invert(2, 3))
 }
+```
+
+Output:
+
+```bash
+3 2
 ```
 
 > Funções de retorno limpo apenas devem ser utilizadas em pequenas funções, seu uso em funções maiores podem dificultar na leitura do código.
@@ -456,6 +593,8 @@ func main() {
 ### If
 
 Para fazer uma condicional if é necessário o uso da instrução ```if```.
+
+Input:
 
 ```go
 package main
@@ -479,11 +618,30 @@ func main() {
 }
 ```
 
+Output:
+
+Caso "y" seja maior que 50
+
+```bash
+x = 61
+x é maior que 50
+```
+
+Ou
+
+```bash
+x = 9
+```
+
+> Os valores 61 e 9 são aleatórios!
+
 > Diferente de outras linguagens como C, Java ou javascript, não há ```()``` parênteses rodeando os componentes do ```if``` mas as ```{}``` chaves são obrigatórias.
 
 ### If com declaração
 
 A intrução ```if``` pode ter uma pequena declaração antes da condição. 
+
+Input:
 
 ```go
 package main
@@ -509,11 +667,24 @@ func randNumber() (x int) {
 }
 ```
 
+Output:
+
+Caso "y" seja maior que 50
+
+```bash
+y = 61
+y é maior que 50
+```
+
+> O valor 61 é aleatório!
+
 > Variáveis declaradas dentro da intrução são válidas somente nesse escopo (até o final do ```if```, ```else if``` ou ```else```) 
 
 ### Else
 
 A instrução ```else``` tem que ser chamada logo após o ```if``` ou ```else if```, caso contrário irá causar um erro.
+
+Input:
 
 ```go
 package main
@@ -539,9 +710,29 @@ func main() {
 }
 ```
 
+Output:
+
+Caso "x" seja maior que 50
+
+```bash
+x = 91
+x é maior que 50
+```
+
+Ou
+
+```bash
+x = 15
+x é menor que 50
+```
+
+> Os valores 91 e 15 são aleatórios!
+
 ### Else If
 
 Assim como o ```else``` a instrução ```else if``` também necessita iniciar após o fechamento de um ```if``` ou outro ```else if```.
+
+Input:
 
 ```go
 package main
@@ -569,9 +760,34 @@ func main() {
 }
 ```
 
+Output:
+
+Caso "x" seja maior que 50
+
+```bash
+x = 78
+x é maior que 50
+```
+
+Caso "x" seja igual a 50
+
+```bash
+x = 50
+x é igual a 50
+```
+
+Ou
+
+```bash
+x = 26
+x é menor que 50
+```
+
+> Os valores 78, 50 e 26 são aleatórios!
+
 ## Loopings
 
-### For	simples
+### For simples
 
 Assim como na maioria das linguagens o looping ```for``` possui 3 componentes:
 
@@ -580,6 +796,8 @@ Assim como na maioria das linguagens o looping ```for``` possui 3 componentes:
 - Expressão da condição (Avaliada antes de cada interação)
 
 - Pós-instrução (executada depois de cada interação)
+
+Input:
 
 ```go
 package main
@@ -591,10 +809,16 @@ import (
 func main() {
 
 	for i := 0; i < 5; i++ {
-		fmt.Println(i)
+		fmt.Print(i)
 	}
 
 }
+```
+
+Output:
+
+```bash
+01234
 ```
 
 > Diferente de outras linguagens como C, Java ou javascript, não há ```()``` parênteses rodeando os componentes do ```for``` mas as ```{}``` chaves são obrigatórias.
@@ -602,6 +826,8 @@ func main() {
 ### While (for)
 
 Em Go a Instrução inicial e a Pós-instrução são opcionais.
+
+Input:
 
 ```go
 package main
@@ -614,16 +840,25 @@ func main() {
 
 	i := 0
 	for i < 5 {
-		fmt.Println(i)
+		fmt.Print(i)
 		i++
 	}
 
+	fmt.Println("")
+
 	for i := 0; i <= 10; {
-		fmt.Println(i)
+		fmt.Print(i)
 		i++
 	}
 
 }
+```
+
+Output:
+
+```bash
+01234       
+012345678910
 ```
 
 > Nota: Em go existe apenas uma estrutura de looping o ```for``` mas elá é bem flexível podendo fazer qualquer um deles.
@@ -631,6 +866,8 @@ func main() {
 ### Loop infinito
 
 Caso a condição do ```for``` seja omissa, o looping se tornará infinito até que haja um ```break```.
+
+Input:
 
 ```go
 package main
@@ -642,22 +879,30 @@ import (
 func main() {
 
 	i := 0
-
 	for {
-		fmt.Println(i)
-		i++
+		fmt.Print(i)
 
 		if i == 10 {
 			break
 		}
+
+		i++
 	}
 
 }
 ```
 
+Output:
+
+```bash
+012345678910
+```
+
 ### Foreach (range)
 
 Em Go o foreach é feito com a instrução ```range```.
+
+Input:
 
 ```go
 package main
@@ -675,6 +920,15 @@ func main() {
 }
 ```
 
-> O ```range``` é utilizado para correr sobre um [array](./basico.md#array-simples) ou [slice](./basico#slice).
+Output:
+
+```bash
+index: 0 value: Caio
+index: 1 value: paochapado
+index: 2 value: abidinhs
+index: 3 value: Vasco14pt
+```
+
+> O ```range``` é utilizado para correr sobre um [array](#array-simples) ou [slice](#slice).
 
 [← Pagina Inicial](../README.md#go4noobs)

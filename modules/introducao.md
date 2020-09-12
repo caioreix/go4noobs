@@ -4,13 +4,13 @@
 
 ## Índice
 
-- [O que é Go?](./introducao.md#o-que-é-go)
+- [O que é Go?](#o-que-é-go)
 
-- [Onde foi criada?](./introducao.md#onde-foi-criada)
+- [Onde foi criada?](#onde-foi-criada)
 
-- [Quem usa Go?](./introducao.md#quem-usa-go)
+- [Quem usa Go?](#quem-usa-go)
 
-- [Por que Go foi criado?](./introducao.md#por-que-go-foi-criado)
+- [Por que Go foi criado?](#por-que-go-foi-criado)
 
 ## O que é Go?
 
