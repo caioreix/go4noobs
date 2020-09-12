@@ -125,9 +125,9 @@ Entretanto, o mais recomendado é utilizar o estilo de importação consignada.
 
 ## Exportação de nomes
 
-As formas de tornar uma variável Global ou não em Go é feita pela forma que seu nome é escrito.
+As formas de tornar uma variável, constante ou função Global ou não em Go é feita pela forma que seu nome é escrito.
 
-Caso ele seja escrito com a primeira letra maiúscula poderá ser usada em qualquer outro pacote. Por outro lado, os que começam com a inicial minúscula poderá ser usado apenas dentro do pacote.
+Caso seja escrito com a primeira letra maiúscula poderá ser usada em qualquer outro pacote. Por outro lado, se o nome começa com a inicial minúscula poderá ser usado apenas dentro do pacote.
 
 Input:
 
@@ -528,10 +528,33 @@ func main() {
 }
 ```
 
+```bash
+Soma = 5 Subtração = 1
+```
+
+Nas funções de múltiplo retorno, se não for necessário usar todos os valores retornados pela função, você pode usar o identificador ```_``` para evitar erros de compilação.
+
+Input:
+
+```go
+package main
+
+import "fmt"
+
+func sumAndSubCalc(x, y int) (int,int) {
+	return x + y, x - y
+}
+
+func main() {
+	_, sub := sumAndSubCalc(3,2)
+	fmt.Println("Subtração =", sub)
+}
+```
+
 Output:
 
 ```bash
-Soma = 5 Subtração = 1
+Subtração = 1
 ```
 
 ### Função com retorno limpo
