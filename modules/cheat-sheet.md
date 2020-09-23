@@ -634,77 +634,72 @@ func main() {
 ```
 
 ## Channels
+
 ```go
-ch := make(chan int) // create a channel of type int
-ch <- 42             // Send a value to the channel ch.
-v := <-ch            // Receive a value from ch
+ch := make(chan int) // crie um channel do tipo int
+ch <- 42             // envia um valor para o channel ch.
+v := <-ch            // recebe um valor de ch
 
-// Non-buffered channels block. Read blocks when no value is available, write blocks until there is a read.
+// Blocos de channel sem buffer. Lê os blocos quando nenhum valor estiver disponível, escreve os blocos até que haja uma leitura.
 
-// Create a buffered channel. Writing to a buffered channels does not block if less than <buffer size> unread values have been written.
+// Crie um channel com buffer. A gravação em channels com buffer não bloqueia a menos que o <tamanho do buffer> seja maior que valores não lidos forem gravados.
 ch := make(chan int, 100)
 
-close(ch) // closes the channel (only sender should close)
+close(ch) // fecha o channel (apenas o sender deve fechar)
 
-// read from channel and test if it has been closed
+// lê o channel e testa se ele foi fechado
 v, ok := <-ch
 
-// if ok is false, channel has been closed
+// se ok for falso, o channel foi fechado
 
-// Read from channel until it is closed
+// Lê o channel até que seja fechado
 for i := range ch {
     fmt.Println(i)
 }
 
-// select blocks on multiple channel operations, if one unblocks, the corresponding case is executed
+// seleciona blocos em operações de múltiplos canais, se um desbloquear, o caso correspondente é executado
 func doStuff(channelOut, channelIn chan int) {
     select {
     case channelOut <- 42:
-        fmt.Println("We could write to channelOut!")
+        fmt.Println("Poderíamos escrever para channelOut!")
     case x := <- channelIn:
-        fmt.Println("We could read from channelIn")
+        fmt.Println("Nós poderíamos ler de channelIn")
     case <-time.After(time.Second * 1):
-        fmt.Println("timeout")
+        fmt.Println("tempo esgotado")
     }
 }
 ```
 
 ### Channel Axioms
-- A send to a nil channel blocks forever
 
-  ```go
-  var c chan string
-  c <- "Hello, World!"
-  // fatal error: all goroutines are asleep - deadlock!
-  ```
-- A receive from a nil channel blocks forever
+```go
+// Um envio para um canal nulo bloqueia ele para sempre
+var c chan string
+c <- "Hello, World!"
+// fatal error: all goroutines are asleep - deadlock!
 
-  ```go
-  var c chan string
-  fmt.Println(<-c)
-  // fatal error: all goroutines are asleep - deadlock!
-  ```
-- A send to a closed channel panics
+// Uma recepção de um canal nulo bloqueia para sempre
+var c chan string
+fmt.Println(<-c)
+// fatal error: all goroutines are asleep - deadlock!
 
-  ```go
-  var c = make(chan string, 1)
-  c <- "Hello, World!"
-  close(c)
-  c <- "Hello, Panic!"
-  // panic: send on closed channel
-  ```
-- A receive from a closed channel returns the zero value immediately
+// Um envio para um canal fechado entra em pânico
+var c = make(chan string, 1)
+c <- "Hello, World!"
+close(c)
+c <- "Hello, Panic!"
+// panic: send on closed channel
 
-  ```go
-  var c = make(chan int, 2)
-  c <- 1
-  c <- 2
-  close(c)
-  for i := 0; i < 3; i++ {
-      fmt.Printf("%d ", <-c)
-  }
-  // 1 2 0
-  ```
+// Uma recepção de um canal fechado retorna o valor zero imediatamente
+var c = make(chan int, 2)
+c <- 1
+c <- 2
+close(c)
+for i := 0; i < 3; i++ {
+  fmt.Printf("%d ", <-c)
+}
+// 1 2 0
+```
 
 ## Printing
 
