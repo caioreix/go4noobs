@@ -42,10 +42,10 @@
 19. [Snippets](#snippets)
     * [Http-Server](#http-server)
 
-## Credits
+## Créditos
 
-Most example code taken from [A Tour of Go](http://tour.golang.org/), which is an excellent introduction to Go.
-If you're new to Go, do that tour. Seriously.
+Esse módulo foi criado e modificado a partir do repositório [golang-cheat-sheet](https://github.com/a8m/golang-cheat-sheet). A maioria dos códigos de exemplo tirados de [Um tour por Go](https://go-tour-br.appspot.com), que é uma excelente introdução ao Go.
+Se você é novo no Go, faça esse tour. Seriamente.
 
 ## Go in a Nutshell
 
