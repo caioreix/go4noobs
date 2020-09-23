@@ -1,3 +1,5 @@
+# ESSE ARQUIVO EM BREVE SERÁ RETIRADO!
+
 [← Pagina Inicial](../README.md#go4noobs)
 
 # Básico

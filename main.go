@@ -4,10 +4,9 @@ import "fmt"
 
 func main() {
 
-	people := []string{"Caio", "paochapado", "abidinhs", "Vasco14pt"} // [home](./home)
+	m := "UGFyYWLDqW5zIHZvY8OqIGZvaSBjdXJpb3NvIG8gYmFzdGFudGUgcGFyYSBkZXNjb2JyaXIgYSBtZW5zYWdlbSBzZWNyZXRhISBUZSBkZXNlam8gdW1hIMOzdGltYSBqb3JuYWRhIG5hIHN1YSB2aWRhIGUgcXVlIHZvY8OqIGNvbnF1aXN0ZSB0b2RvcyBvcyBzZXVzIHNvbmhvcy4gRXUgZmljbyBleHRyZW1hbWVudGUgZmVsaXogZSBhZ3JhZGVjaWRvIGRlIHRlciBwYXJ0aWNpcGFkbyBkZXNzYSBqb3JuYWRhLiBOw6NvIGRlc2lzdGEhIFZvY8OqIGlyYSBjb25xdWlzdGFyIG8gbXVuZG8h"
 
-	for i, person := range people {
-		fmt.Println("index:", i, "value:", person)
-	}
+	t := []byte{69, 115, 115, 97, 32, 118, 97, 114, 105, 195, 161, 118, 101, 108, 32, 39, 109, 39, 32, 112, 97, 114, 101, 99, 101, 32, 101, 115, 116, 97, 114, 32, 101, 110, 99, 114, 105, 112, 116, 97, 100, 97, 32, 101, 109, 32, 98, 97, 115, 101, 54, 52, 44, 32, 115, 101, 114, 195, 161, 32, 113, 117, 101, 32, 112, 111, 115, 115, 111, 32, 100, 101, 115, 101, 110, 99, 114, 105, 112, 116, 97, 45, 108, 97, 63}
 
+	fmt.Print(m, "\n", t)
 }
