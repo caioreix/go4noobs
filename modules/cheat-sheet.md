@@ -29,7 +29,7 @@
 11. [Structs](#structs)
 12. [Ponteiros](#ponteiros)
 13. [Interfaces](#interfaces)
-14. [Embedding](#embedding)
+14. [Incorporação](#incorporação)
 15. [Errors](#errors)
 16. [Concurrency](#concurrency)
     * [Goroutines](#goroutines)
@@ -559,31 +559,31 @@ func (foo Foo) Awesomize() string {
 }
 ```
 
-## Embedding
+## Incorporação
 
-There is no subclassing in Go. Instead, there is interface and struct embedding.
+Não há subclasses no Go. Em vez disso, há incorporação de interface e estrutura.
 
 ```go
-// ReadWriter implementations must satisfy both Reader and Writer
+// ReadWriter sua implementação devem satisfazer ambos Reader e Writer
 type ReadWriter interface {
     Reader
     Writer
 }
 
-// Server exposes all the methods that Logger has
+// Server expõe todos os métodos que o Logger tem
 type Server struct {
     Host string
     Port int
     *log.Logger
 }
 
-// initialize the embedded type the usual way
+// inicialize o tipo incorporado da maneira usual
 server := &Server{"localhost", 80, log.New(...)}
 
-// methods implemented on the embedded struct are passed through
-server.Log(...) // calls server.Logger.Log(...)
+// métodos implementados na estrutura incorporada são passados ​​por
+server.Log(...) // chama server.Logger.Log(...)
 
-// the field name of the embedded type is its type name (in this case Logger)
+// o nome do campo do tipo incorporado é o seu nome de tipo (neste caso Logger)
 var logger *log.Logger = server.Logger
 ```
 
