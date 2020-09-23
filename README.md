@@ -39,6 +39,8 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 
 - [Básico](./modules/basico.md#básico)
 
+- [cheat sheet(resumo)](./modules/cheat-sheet.md#cheat-sheet)
+
 <!-- CONTRIBUTING -->
 
 ## Como Contribuir
