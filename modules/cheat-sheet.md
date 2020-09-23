@@ -543,16 +543,17 @@ var s *Vertex = new(Vertex) // new cria um ponteiro para uma nova instância de 
 ```
 
 ## Interfaces
+
 ```go
-// interface declaration
+// declaração de interface
 type Awesomizer interface {
     Awesomize() string
 }
 
-// types do *not* declare to implement interfaces
+// tipos *não* declaram para implementar interfaces
 type Foo struct {}
 
-// instead, types implicitly satisfy an interface if they implement all required methods
+// em vez disso, os tipos satisfazem implicitamente uma interface se implementarem todos os métodos necessários
 func (foo Foo) Awesomize() string {
     return "Awesome!"
 }
