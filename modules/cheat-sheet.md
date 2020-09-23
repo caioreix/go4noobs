@@ -15,8 +15,8 @@
     * [Funções como valores e closures](#funções-como-valores-e-closures)
     * [Funções Variadicas](#funções-variadicas)
 5. [Tipos integrados](#tipos-integrados)
-6. [Type Conversions](#type-conversions)
-7. [Packages](#packages)
+6. [Conversões de tipo](#conversões-de-tipo)
+7. [Pacotes](#pacotes)
 8. [Control structures](#control-structures)
     * [If](#if)
     * [Loops](#loops)
@@ -254,33 +254,35 @@ string
 int  int8  int16  int32  int64
 uint uint8 uint16 uint32 uint64 uintptr
 
-byte // alias for uint8
+byte // apelido para uint8
 
-rune // alias for int32 ~= a character (Unicode code point) - very Viking
+rune // apelido para int32 ~= um caractere (ponto de código Unicode) - muito Viking
 
 float32 float64
 
 complex64 complex128
 ```
 
-## Type Conversions
+## Conversões de tipo
+
 ```go
 var i int = 42
 var f float64 = float64(i)
 var u uint = uint(f)
 
-// alternative syntax
+// sintaxe alternativa
 i := 42
 f := float64(i)
 u := uint(f)
 ```
 
-## Packages
-* Package declaration at top of every source file
-* Executables are in package `main`
-* Convention: package name == last name of import path (import path `math/rand` => package `rand`)
-* Upper case identifier: exported (visible from other packages)
-* Lower case identifier: private (not visible from other packages)
+## Pacotes
+
+* Declaração de pacote no topo de cada arquivo fonte
+* Os executáveis ​​estão no pacote `main`
+* Convenção: nome do pacote == sobrenome do caminho de importação (caminho de importação `math/rand` => pacote `rand`)
+* Identificador de maiúsculas: exportado (visível de outros pacotes)
+* Identificador em minúsculas: privado (não é visível em outros pacotes)
 
 ## Control structures
 
