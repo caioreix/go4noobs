@@ -488,46 +488,50 @@ for key, value := range m {
 
 ## Structs
 
-There are no classes, only structs. Structs can have methods.
-```go
-// A struct is a type. It's also a collection of fields
+Não há classes, apenas structs. As structs podem ter métodos.
 
-// Declaration
+```go
+// Uma struct é um tipo. É também uma coleção de campos
+
+// Declaração
 type Vertex struct {
     X, Y int
 }
 
-// Creating
+// Criando
 var v = Vertex{1, 2}
-var v = Vertex{X: 1, Y: 2} // Creates a struct by defining values with keys
-var v = []Vertex{{1,2},{5,2},{5,5}} // Initialize a slice of structs
+var v = Vertex{X: 1, Y: 2} // Cria uma struct definindo valores com chaves
+var v = []Vertex{{1,2},{5,2},{5,5}} // Inicializa um slice de structs
 
-// Accessing members
+// Acessando membros
 v.X = 4
 
-// You can declare methods on structs. The struct you want to declare the
-// method on (the receiving type) comes between the the func keyword and
-// the method name. The struct is copied on each method call(!)
+// Você pode declarar métodos em structs. A struct que você quer declarar o
+// método (o tipo de recebimento) fica entre a palavra-chave func e
+// o nome do método. A struct é copiado em cada método de chamada(!)
 func (v Vertex) Abs() float64 {
     return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
-// Call method
+// Método de chamada
 v.Abs()
 
-// For mutating methods, you need to use a pointer (see below) to the Struct
-// as the type. With this, the struct value is not copied for the method call.
+// Para métodos mutantes, você precisa usar um ponteiro (olhe abaixo) A Struct
+// como o tipo.Com isso, o valor da struct não é copiado para a chamada do método.
 func (v *Vertex) add(n float64) {
     v.X += n
     v.Y += n
 }
 
 ```
+
 **Anonymous structs:**
+
 Cheaper and safer than using `map[string]interface{}`.
+
 ```go
 point := struct {
-	X, Y int
+    X, Y int
 }{1, 2}
 ```
 
