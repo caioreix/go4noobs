@@ -24,7 +24,7 @@
 9. [Arrays, Slices, Ranges](#arrays-slices-ranges)
     * [Arrays](#arrays)
     * [Slices](#slices)
-    * [Operations on Arrays and Slices](#operations-on-arrays-and-slices)
+    * [Operações em Arrays e Slices](#operações-em-arrays-e-slices)
 10. [Maps](#maps)
 11. [Structs](#structs)
 12. [Pointers](#pointers)
@@ -435,7 +435,7 @@ x := [3]string{"Лайка", "Белка", "Стрелка"}
 s := x[:] // um slice referenciando o armazenamento de x
 ```
 
-### Operations on Arrays and Slices
+### Operações em Arrays e Slices
 
 `len(a)` dá a você o comprimento de um array/slice. É uma função integrada, não um atributo/método de um array.
 
