@@ -30,7 +30,7 @@
 12. [Ponteiros](#ponteiros)
 13. [Interfaces](#interfaces)
 14. [Incorporação](#incorporação)
-15. [Errors](#errors)
+15. [Erros](#erros)
 16. [Concurrency](#concurrency)
     * [Goroutines](#goroutines)
     * [Channels](#channels)
@@ -587,25 +587,26 @@ server.Log(...) // chama server.Logger.Log(...)
 var logger *log.Logger = server.Logger
 ```
 
-## Errors
-There is no exception handling. Functions that might produce an error just declare an additional return value of type `Error`. This is the `Error` interface:
+## Erros
+
+Não há tratamento de exceção. Funções que podem produzir um erro apenas declaram um valor de retorno adicional do tipo `Error`.
+
 ```go
+// Esta é a interface `Error`:
 type error interface {
     Error() string
 }
-```
 
-A function that might return an error:
-```go
+// Uma função que pode retornar um erro:
 func doStuff() (int, error) {
 }
 
 func main() {
     result, err := doStuff()
     if err != nil {
-        // handle error
+        // lidar com erro
     } else {
-        // all is good, use result
+        // tudo está bem, use o resultado
     }
 }
 ```
