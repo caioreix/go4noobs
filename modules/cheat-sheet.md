@@ -11,9 +11,9 @@
     * [Lógico](#lógico)
     * [Outros](#outros)
 3. [Declarações](#declarações)
-4. [Functions](#functions)
-    * [Functions as values and closures](#functions-as-values-and-closures)
-    * [Variadic Functions](#variadic-functions)
+4. [Funções](#funções)
+    * [Funções como valores e closures](#funções-como-valores-e-closures)
+    * [Funções Variadicas](#funções-variadicas)
 5. [Built-in Types](#built-in-types)
 6. [Type Conversions](#type-conversions)
 7. [Packages](#packages)
@@ -47,20 +47,20 @@
 Esse módulo foi criado e modificado a partir do repositório [golang-cheat-sheet](https://github.com/a8m/golang-cheat-sheet). A maioria dos códigos de exemplo tirados de [Um tour por Go](https://go-tour-br.appspot.com), que é uma excelente introdução ao Go.
 Se você é novo no Go, faça esse tour. Seriamente.
 
-## Go in a Nutshell
+## Go em poucas palavras
 
-* Imperative language
-* Statically typed
-* Syntax tokens similar to C (but less parentheses and no semicolons) and the structure to Oberon-2
-* Compiles to native code (no JVM)
-* No classes, but structs with methods
-* Interfaces
-* No implementation inheritance. There's [type embedding](http://golang.org/doc/effective%5Fgo.html#embedding), though.
-* Functions are first class citizens
-* Functions can return multiple values
-* Has closures
-* Pointers, but not pointer arithmetic
-* Built-in concurrency primitives: Goroutines and Channels
+* Linguagem imperativa
+* Estáticamente tipada
+* Tokens de sintaxe semelhantes a C (mas, menos parênteses e sem ponto e vírgula) e a estrutura para Oberon-2
+* Compila para código nativo(sem JVM)
+* Sem classes, mas estruturas com métodos
+* interfaces
+* Sem herança de implementação. Apesar disso, há ['type embedding'](http://golang.org/doc/effective%5Fgo.html#embedding).
+* Funções são cidadãos de primeira classe
+* As funções podem retornar vários valores
+* Possue closures
+* Ponteiros, mas não possui aritmética de ponteiros
+* Built-in primitivas de concorrencia: Goroutines e Channels
 
 # Sintaxe Básica
 
@@ -149,95 +149,98 @@ const (
     fmt.Println(c, d) // 8 16 (2^3, 2^4)
 ```
 
-## Functions
+## Funções
+
 ```go
-// a simple function
+// uma função simples
 func functionName() {}
 
-// function with parameters (again, types go after identifiers)
+// função com parâmetros (novamente, os tipos vêm depois dos identificadores)
 func functionName(param1 string, param2 int) {}
 
-// multiple parameters of the same type
+// vários parâmetros do mesmo tipo
 func functionName(param1, param2 int) {}
 
-// return type declaration
+// retorno do tipo de declaração
 func functionName() int {
     return 42
 }
 
-// Can return multiple values at once
+// Pode retornar vários valores de uma vez
 func returnMulti() (int, string) {
     return 42, "foobar"
 }
 var x, str = returnMulti()
 
-// Return multiple named results simply by return
+// Retorne vários resultados nomeados simplesmente usando return
 func returnMulti2() (n int, s string) {
     n = 42
     s = "foobar"
-    // n and s will be returned
+    // n e s serão retornados
     return
 }
 var x, str = returnMulti2()
 
 ```
 
-### Functions As Values And Closures
+### Funções Como Valores E Closures
+
 ```go
 func main() {
-    // assign a function to a name
+    // atribuindo uma função a um nome
     add := func(a, b int) int {
         return a + b
     }
-    // use the name to call the function
+    // use o nome para chamar a função
     fmt.Println(add(3, 4))
 }
 
-// Closures, lexically scoped: Functions can access values that were
-// in scope when defining the function
+// Closures, com escopo léxico: As funções podem acessar valores
+// que foram declarados no escopo ao definir a função
 func scope() func() int{
-    outer_var := 2
-    foo := func() int { return outer_var}
+    outerVar := 2
+    foo := func() int { return outerVar}
     return foo
 }
 
-func another_scope() func() int{
-    // won't compile because outer_var and foo not defined in this scope
-    outer_var = 444
+func anotherScope() func() int{
+    // não compilará porque outerVar e foo não estão definidos neste escopo
+    outerVar = 444
     return foo
 }
 
 
 // Closures
 func outer() (func() int, int) {
-    outer_var := 2
+    outerVar := 2
     inner := func() int {
-        outer_var += 99 // outer_var from outer scope is mutated.
-        return outer_var
+        outerVar += 99 // outerVar do escopo externo é mutada.
+        return outerVar
     }
     inner()
-    return inner, outer_var // return inner func and mutated outer_var 101
+    return inner, outerVar // retorno da função inner e variável mutada outerVar 101
 }
 ```
 
-### Variadic Functions
-```go
-func main() {
-	fmt.Println(adder(1, 2, 3)) 	// 6
-	fmt.Println(adder(9, 9))	// 18
+### Funções Variadicas
 
-	nums := []int{10, 20, 30}
-	fmt.Println(adder(nums...))	// 60
+```go
+// Usando ... antes do nome do tipo do último parâmetro, você pode indicar que esse parâmetro leva zero ou mais desses parâmetros.
+// A função é invocada como qualquer outra função, exceto que podemos passar quantos argumentos quisermos.
+func adder(args ...int) int {
+  total := 0
+  for _, v := range args { // Repete os argumentos, seja qual for o número.
+    total += v
+  }
+  return total
 }
 
-// By using ... before the type name of the last parameter you can indicate that it takes zero or more of those parameters.
-// The function is invoked like any other function except we can pass as many arguments as we want.
-func adder(args ...int) int {
-	total := 0
-	for _, v := range args { // Iterates over the arguments whatever the number.
-		total += v
-	}
-	return total
+func main() {
+  fmt.Println(adder(1, 2, 3)) // 6
+  fmt.Println(adder(9, 9))    // 18
+
+  nums := []int{10, 20, 30}
+  fmt.Println(adder(nums...)) // 60
 }
 ```
 
