@@ -472,7 +472,7 @@ fmt.Println(m["key"])
 
 delete(m, "key")
 
-elem, ok := m["key"] // test if key "key" is present and retrieve it, if so
+elem, ok := m["key"] // testa se a chave "key" está presente e retorna isso, caso esteja
 
 // map literal
 var m = map[string]Vertex{
@@ -480,7 +480,7 @@ var m = map[string]Vertex{
     "Google":    {37.42202, -122.08408},
 }
 
-// iterate over map content
+// iterar sobre o conteúdo do map
 for key, value := range m {
 }
 
