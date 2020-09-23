@@ -394,6 +394,24 @@ there:
         case ' ', '?', '&', '=', '#', '+', '%':
             fmt.Println("Should escape")
     }
+
+     //Um switch de tipo é como uma instrução switch regular, mas os casos em um switch de tipo especificam tipos (não valores), e esses tipos são comparados com o tipo do valor mantido pelo valor de interface fornecido.
+    func do(i interface{}) {
+        switch v := i.(type) {
+        case int:
+            fmt.Printf("Twice %v is %v\n", v, v*2)
+        case string:
+            fmt.Printf("%q is %v bytes long\n", v, len(v))
+        default:
+            fmt.Printf("I don't know about type %T!\n", v)
+        }
+    }
+
+    func main() {
+        do(21)
+        do("hello")
+        do(true)
+    }
 ```
 
 ## Arrays, Slices, Ranges
@@ -716,28 +734,6 @@ hellomsg := `
  "Hello" in Chinese is 你好 ('Ni Hao')
  "Hello" in Hindi is नमस्ते ('Namaste')
 ` // literal de string multilinha, usando crase no início e no final
-```
-
-## Reflection
-### Type Switch
-A type switch is like a regular switch statement, but the cases in a type switch specify types (not values), and those values are compared against the type of the value held by the given interface value.
-```go
-func do(i interface{}) {
-    switch v := i.(type) {
-    case int:
-        fmt.Printf("Twice %v is %v\n", v, v*2)
-    case string:
-        fmt.Printf("%q is %v bytes long\n", v, len(v))
-    default:
-        fmt.Printf("I don't know about type %T!\n", v)
-    }
-}
-
-func main() {
-    do(21)
-    do("hello")
-    do(true)
-}
 ```
 
 # Snippets
