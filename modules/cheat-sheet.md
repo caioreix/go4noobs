@@ -14,7 +14,7 @@
 4. [Funções](#funções)
     * [Funções como valores e closures](#funções-como-valores-e-closures)
     * [Funções Variadicas](#funções-variadicas)
-5. [Built-in Types](#built-in-types)
+5. [Tipos integrados](#tipos-integrados)
 6. [Type Conversions](#type-conversions)
 7. [Packages](#packages)
 8. [Control structures](#control-structures)
@@ -244,8 +244,9 @@ func main() {
 }
 ```
 
-## Built-in Types
-```
+## Tipos integrados
+
+```go
 bool
 
 string
