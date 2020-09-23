@@ -399,62 +399,65 @@ there:
 ## Arrays, Slices, Ranges
 
 ### Arrays
-```go
-var a [10]int // declare an int array with length 10. Array length is part of the type!
-a[3] = 42     // set elements
-i := a[3]     // read elements
 
-// declare and initialize
+```go
+var a [10]int // declara um array int com 10 de comprimento. O comprimento do array faz parte do tipo!
+a[3] = 42     // definine elementos
+i := a[3]     // lê elementos
+
+// declara e inicializa
 var a = [2]int{1, 2}
-a := [2]int{1, 2} //shorthand
-a := [...]int{1, 2} // elipsis -> Compiler figures out array length
+a := [2]int{1, 2} //forma abreviada
+a := [...]int{1, 2} // reticências -> Compilador calcula o comprimento do array
 ```
 
 ### Slices
+
 ```go
-var a []int                              // declare a slice - similar to an array, but length is unspecified
-var a = []int {1, 2, 3, 4}               // declare and initialize a slice (backed by the array given implicitly)
-a := []int{1, 2, 3, 4}                   // shorthand
+var a []int                              // declara um slice - semelhante a um array, mas o comprimento não é especificado
+var a = []int {1, 2, 3, 4}               // declara e inicializa um slice (apoiado pelo array dado implicitamente)
+a := []int{1, 2, 3, 4}                   // forma abreviada
 chars := []string{0:"a", 2:"c", 1: "b"}  // ["a", "b", "c"]
 
-var b = a[lo:hi]	// creates a slice (view of the array) from index lo to hi-1
-var b = a[1:4]		// slice from index 1 to 3
-var b = a[:3]		// missing low index implies 0
-var b = a[3:]		// missing high index implies len(a)
-a =  append(a,17,3)	// append items to slice a
-c := append(a,b...)	// concatenate slices a and b
+var b = a[lo:hi]    // cria um slice (fatia de um array) do índice lo para hi-1
+var b = a[1:4]      // slice do índice 1 ao 3
+var b = a[:3]       // falta de índice baixo implica 0
+var b = a[3:]       // falta de índice alto implica len(a)
+a =  append(a,17,3) // acrescenta itens para o slice a
+c := append(a,b...) // concatena os slices a e b
 
-// create a slice with make
-a = make([]byte, 5, 5)	// first arg length, second capacity
-a = make([]byte, 5)	// capacity is optional
+// crie uma fatia com make
+a = make([]byte, 5, 5) // segundo argumento comprimento, terceiro capacidade
+a = make([]byte, 5)    // capacidade é opcional
 
-// create a slice from an array
+// crie uma slice de um array
 x := [3]string{"Лайка", "Белка", "Стрелка"}
-s := x[:] // a slice referencing the storage of x
+s := x[:] // um slice referenciando o armazenamento de x
 ```
 
 ### Operations on Arrays and Slices
-`len(a)` gives you the length of an array/a slice. It's a built-in function, not a attribute/method on the array.
+
+`len(a)` dá a você o comprimento de um array/slice. É uma função integrada, não um atributo/método de um array.
 
 ```go
-// loop over an array/a slice
+// loop sobre um array/slice
 for i, e := range a {
-    // i is the index, e the element
+    // 'i' é o índice, e 'e' o elemento
 }
 
-// if you only need e:
+// se você só precisa do elemento:
 for _, e := range a {
-    // e is the element
+    // 'e' é o elemento
 }
 
-// ...and if you only need the index
+// ...e se você só precisa do índice
 for i := range a {
 }
 
-// In Go pre-1.4, you'll get a compiler error if you're not using i and e.
-// Go 1.4 introduced a variable-free form, so that you can do this
+// Em Go pre-1.4, você obterá um erro do compilador se não estiver usando 'i' e 'e'.
+// Go 1.4 introduziu uma forma livre de variável, para que você possa fazer isso
 for range time.Tick(time.Second) {
-    // do it once a sec
+    // faça isso uma vez por segundo
 }
 
 ```
