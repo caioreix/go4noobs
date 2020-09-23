@@ -35,12 +35,6 @@
     * [Goroutines](#goroutines)
     * [Channels](#channels)
     * [Channel Axioms](#channel-axioms)
-17. [Printing](#printing)
-18. [Reflection](#reflection)
-    * [Type Switch](#type-switch)
-    * [Examples](https://github.com/a8m/reflect-examples)
-19. [Snippets](#snippets)
-    * [Http-Server](#http-server)
 
 ## Créditos
 
@@ -719,49 +713,4 @@ for i := 0; i < 3; i++ {
 // 1 2 0
 ```
 
-## Printing
-
-```go
-fmt.Println("Hello, 你好, नमस्ते, Привет, ᎣᏏᏲ") // impressão básica, mais nova linha
-p := struct { X, Y int }{ 17, 2 }
-fmt.Println( "My point:", p, "x coord=", p.X ) // impressão de structs, ints etc
-s := fmt.Sprintln( "My point:", p, "x coord=", p.X ) // imprime para variável de string
-
-fmt.Printf("%d hex:%x bin:%b fp:%f sci:%e",17,17,17,17.0,17.0) // formatação c-ish
-s2 := fmt.Sprintf( "%d %f", 17, 17.0 ) // impressão formatada para variável de string
-
-hellomsg := `
- "Hello" in Chinese is 你好 ('Ni Hao')
- "Hello" in Hindi is नमस्ते ('Namaste')
-` // literal de string multilinha, usando crase no início e no final
-```
-
-# Snippets
-
-## HTTP Server
-```go
-package main
-
-import (
-    "fmt"
-    "net/http"
-)
-
-// define a type for the response
-type Hello struct{}
-
-// let that type implement the ServeHTTP method (defined in interface http.Handler)
-func (h Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "Hello!")
-}
-
-func main() {
-    var h Hello
-    http.ListenAndServe("localhost:4000", h)
-}
-
-// Here's the method signature of http.ServeHTTP:
-// type Handler interface {
-//     ServeHTTP(w http.ResponseWriter, r *http.Request)
-// }
-```
+[← Pagina Inicial](../README.md#go4noobs)
