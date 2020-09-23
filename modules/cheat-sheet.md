@@ -17,7 +17,7 @@
 5. [Tipos integrados](#tipos-integrados)
 6. [Conversões de tipo](#conversões-de-tipo)
 7. [Pacotes](#pacotes)
-8. [Control structures](#control-structures)
+8. [Estruturas de controle](#estruturas-de-controle)
     * [If](#if)
     * [Loops](#loops)
     * [Switch](#switch)
@@ -284,50 +284,52 @@ u := uint(f)
 * Identificador de maiúsculas: exportado (visível de outros pacotes)
 * Identificador em minúsculas: privado (não é visível em outros pacotes)
 
-## Control structures
+## Estruturas de controle
 
 ### If
+
 ```go
 func main() {
-	// Basic one
-	if x > 10 {
-		return x
-	} else if x == 10 {
-		return 10
-	} else {
-		return -x
-	}
+  // Mais básico
+  if x > 10 {
+    return x
+  } else if x == 10 {
+    return 10
+  } else {
+    return -x
+  }
 
-	// You can put one statement before the condition
-	if a := b + c; a < 42 {
-		return a
-	} else {
-		return a - 42
-	}
+  // Você pode colocar uma declaração antes da condição
+  if a := b + c; a < 42 {
+    return a
+  } else {
+    return a - 42
+  }
 
-	// Type assertion inside if
-	var val interface{}
-	val = "foo"
-	if str, ok := val.(string); ok {
-		fmt.Println(str)
-	}
+  // Afirmação de tipo dentro do if
+  var val interface{}
+  val = "foo"
+  if str, ok := val.(string); ok {
+    fmt.Println(str)
+  }
 }
 ```
 
 ### Loops
+
 ```go
-    // There's only `for`, no `while`, no `until`
+    // Há apenas `for`, não `while`, não `until`
     for i := 1; i < 10; i++ {
     }
     for ; i < 10;  { // while - loop
     }
-    for i < 10  { // you can omit semicolons if there is only a condition
+    for i < 10  { // você pode omitir ponto-e-vírgula se houver apenas uma condição
     }
-    for { // you can omit the condition ~ while (true)
+    for { // você pode omitir a condição == while(true){}
     }
-    
-    // use break/continue on current loop
-    // use break/continue with label on outer loop
+
+    // Use break/continue no loop atual
+    // Use break/continue com etiqueta no laço externo
 here:
     for i := 0; i < 2; i++ {
         for j := i + 1; j < 3; j++ {
@@ -356,12 +358,13 @@ there:
 ```
 
 ### Switch
+
 ```go
     // switch statement
     switch operatingSystem {
     case "darwin":
         fmt.Println("Mac OS Hipster")
-        // cases break automatically, no fallthrough by default
+        // cases quebrão automaticamente, sem fallthrough por padrão
     case "linux":
         fmt.Println("Linux Geek")
     default:
@@ -369,12 +372,12 @@ there:
         fmt.Println("Other")
     }
 
-    // as with for and if, you can have an assignment statement before the switch value
+    // assim como no for e no if, você pode ter uma declaração de atribuição antes do switch
     switch os := runtime.GOOS; os {
     case "darwin": ...
     }
 
-    // you can also make comparisons in switch cases
+    // você também pode fazer comparações em casos de troca
     number := 42
     switch {
         case number < 42:
@@ -385,7 +388,7 @@ there:
             fmt.Println("Greater")
     }
 
-    // cases can be presented in comma-separated lists
+    // cases podem ser apresentados em listas separadas por vírgulas
     var char byte = '?'
     switch char {
         case ' ', '?', '&', '=', '#', '+', '%':
