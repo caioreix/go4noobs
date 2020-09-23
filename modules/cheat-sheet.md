@@ -31,7 +31,7 @@
 13. [Interfaces](#interfaces)
 14. [Incorporação](#incorporação)
 15. [Erros](#erros)
-16. [Concurrency](#concurrency)
+16. [Concorrencia](#concorrencia)
     * [Goroutines](#goroutines)
     * [Channels](#channels)
     * [Channel Axioms](#channel-axioms)
@@ -611,24 +611,25 @@ func main() {
 }
 ```
 
-# Concurrency
+# Concorrencia
 
 ## Goroutines
-Goroutines are lightweight threads (managed by Go, not OS threads). `go f(a, b)` starts a new goroutine which runs `f` (given `f` is a function).
+
+Goroutines são threads leves (gerenciados pelo Go, e não threads de sistema operacional). `go f(a, b)` inicia um novo goroutine que executa `f` (dado `f` é uma função).
 
 ```go
-// just a function (which can be later started as a goroutine)
+// apenas uma função (que pode ser iniciada posteriormente como uma goroutine)
 func doStuff(s string) {
 }
 
 func main() {
-    // using a named function in a goroutine
+    // usando uma função nomeada em um goroutine
     go doStuff("foobar")
 
-    // using an anonymous inner function in a goroutine
+    // usando uma função interna anônima em uma goroutine
     go func (x int) {
-        // function body goes here
-    }(42)
+        // o corpo da função vai aqui
+    }(42)// executa a função apos ser criada
 }
 ```
 
