@@ -10,7 +10,7 @@
     * [Comparação](#comparação)
     * [Lógico](#lógico)
     * [Outros](#outros)
-3. [Declarations](#declarations)
+3. [Declarações](#declarações)
 4. [Functions](#functions)
     * [Functions as values and closures](#functions-as-values-and-closures)
     * [Variadic Functions](#variadic-functions)
@@ -125,17 +125,19 @@ func main() {
 |`*`|ponteiro de desreferência|
 |`<-`|enviar / receber operador (veja [Channels](#channels) abaixo)|
 
-## Declarations
-Type goes after identifier!
-```go
-var foo int // declaration without initialization
-var foo int = 42 // declaration with initialization
-var foo, bar int = 42, 1302 // declare and init multiple vars at once
-var foo = 42 // type omitted, will be inferred
-foo := 42 // shorthand, only in func bodies, omit var keyword, type is always implicit
-const constant = "This is a constant"
+## Declarações
 
-// iota can be used for incrementing numbers, starting from 0
+O tipo vai depois do identificador!
+
+```go
+var foo int // declaração sem inicialização
+var foo int = 42 // declaração com inicialização
+var foo, bar int = 42, 1302 // declara e inicia variáveis múltiplas de uma vez
+var foo = 42 // tipo omitido, será inferido
+foo := 42 // abreviadamente, apenas em corpos de funções, omite a palavra-chave var, o tipo está sempre implícito
+const constant = "Essa é uma constante"
+
+// iota pode ser usado para incrementar números, começando do 0
 const (
     _ = iota
     a
@@ -143,7 +145,7 @@ const (
     c = 1 << iota
     d
 )
-    fmt.Println(a, b) // 1 2 (0 is skipped)
+    fmt.Println(a, b) // 1 2 (0 foi pulado)
     fmt.Println(c, d) // 8 16 (2^3, 2^4)
 ```
 
