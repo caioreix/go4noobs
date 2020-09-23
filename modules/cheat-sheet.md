@@ -27,7 +27,7 @@
     * [Operações em Arrays e Slices](#operações-em-arrays-e-slices)
 10. [Maps](#maps)
 11. [Structs](#structs)
-12. [Pointers](#pointers)
+12. [Ponteiros](#ponteiros)
 13. [Interfaces](#interfaces)
 14. [Embedding](#embedding)
 15. [Errors](#errors)
@@ -523,24 +523,23 @@ func (v *Vertex) add(n float64) {
     v.Y += n
 }
 
-// Anonymous structs:
-// Cheaper and safer than using `map[string]interface{}`.
+// Structs anônimas:
+// Mais barato e seguro do que usar `map[string]interface{}`.
 point := struct {
     X, Y int
 }{1, 2}
 ```
 
+## Ponteiros
 
-
-## Pointers
 ```go
-p := Vertex{1, 2}  // p is a Vertex
-q := &p            // q is a pointer to a Vertex
-r := &Vertex{1, 2} // r is also a pointer to a Vertex
+p := Vertex{1, 2}  // p é um Vertex
+q := &p            // q é um ponteiro para um Vertex
+r := &Vertex{1, 2} // r também é um ponteiro para um Vertex
 
-// The type of a pointer to a Vertex is *Vertex
+// O tipo de um ponteiro para um Vertex é *Vertex
 
-var s *Vertex = new(Vertex) // new creates a pointer to a new struct instance
+var s *Vertex = new(Vertex) // new cria um ponteiro para uma nova instância de struct
 ```
 
 ## Interfaces
