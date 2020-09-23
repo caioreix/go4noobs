@@ -5,11 +5,11 @@
 # Índice
 
 1. [Sintaxe Básica](#sintaxe-básica)
-2. [Operators](#operators)
-    * [Arithmetic](#arithmetic)
-    * [Comparison](#comparison)
-    * [Logical](#logical)
-    * [Other](#other)
+2. [Operadores](#operadores)
+    * [Aritméticos](#aritméticos)
+    * [Comparação](#comparação)
+    * [Lógico](#lógico)
+    * [Outros](#outros)
 3. [Declarations](#declarations)
 4. [Functions](#functions)
     * [Functions as values and closures](#functions-as-values-and-closures)
@@ -80,45 +80,50 @@ func main() {
 
 `$ go run hello.go`
 
-## Operators
-### Arithmetic
-|Operator|Description|
-|--------|-----------|
-|`+`|addition|
-|`-`|subtraction|
-|`*`|multiplication|
-|`/`|quotient|
-|`%`|remainder|
-|`&`|bitwise and|
-|`\|`|bitwise or|
-|`^`|bitwise xor|
-|`&^`|bit clear (and not)|
-|`<<`|left shift|
-|`>>`|right shift|
+## Operadores
 
-### Comparison
-|Operator|Description|
-|--------|-----------|
-|`==`|equal|
-|`!=`|not equal|
-|`<`|less than|
-|`<=`|less than or equal|
-|`>`|greater than|
-|`>=`|greater than or equal|
+### Aritméticos
 
-### Logical
 |Operator|Description|
 |--------|-----------|
-|`&&`|logical and|
-|`\|\|`|logical or|
-|`!`|logical not|
+|`+`|adição|
+|`-`|subtração|
+|`*`|multiplicação|
+|`/`|divisão|
+|`%`|resto|
+|`&`|e(and)|
+|`\|`|ou(or)|
+|`^`|ou exclusivo(xor)|
+|`&^`|e não(and not)|
+|`<<`|desvio à esquerda|
+|`>>`|desvio à direita|
 
-### Other
+### Comparação
+
 |Operator|Description|
 |--------|-----------|
-|`&`|address of / create pointer|
-|`*`|dereference pointer|
-|`<-`|send / receive operator (see 'Channels' below)|
+|`==`|igual|
+|`!=`|diferente|
+|`<`|menor que|
+|`<=`|menor ou igual que|
+|`>`|maior que|
+|`>=`|maio ou igual que|
+
+### Lógico
+
+|Operador|Descrição|
+|--------|-----------|
+|`&&`|e(and) lógico|
+|`\|\|`|ou(or) lógico|
+|`!`|não(not) lógico|
+
+### Outros
+
+|Operador|Descrição|
+|--------|-----------|
+|`&`|endereço de / criar ponteiro|
+|`*`|ponteiro de desreferência|
+|`<-`|enviar / receber operador (veja [Channels](#channels) abaixo)|
 
 ## Declarations
 Type goes after identifier!
