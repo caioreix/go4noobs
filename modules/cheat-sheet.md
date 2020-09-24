@@ -124,11 +124,12 @@ func main() {
 O tipo vai depois do identificador!
 
 ```go
-var foo int         // declaração sem inicialização
-var foo int = 42      // declaração com inicialização
+var foo int                 // declaração sem inicialização
+var foo int = 42            // declaração com inicialização
 var foo, bar int = 42, 1302 // declara e inicia variáveis múltiplas de uma vez
-var foo = 42        // tipo omitido, será inferido
-foo := 42           // abreviadamente, apenas em corpos de funções, omite a palavra-chave var, o tipo está sempre implícito
+var foo = 42                // tipo omitido, será inferido
+foo := 42                   // abreviadamente, apenas em corpos de funções, omite
+                            // a palavra-chave var, o tipo está sempre implícito
 const constant = "Essa é uma constante"
 
 // iota pode ser usado para incrementar números, começando do 0
@@ -219,8 +220,10 @@ func outer() (func() int, int) {
 ### Funções Variadicas
 
 ```go
-// Usando ... antes do nome do tipo do último parâmetro, você pode indicar que esse parâmetro leva zero ou mais desses parâmetros.
-// A função é invocada como qualquer outra função, exceto que podemos passar quantos argumentos quisermos.
+// Usando ... antes do nome do tipo do último parâmetro,
+// você pode indicar que esse parâmetro leva zero ou mais desses parâmetros.
+// A função é invocada como qualquer outra função,
+// exceto que podemos passar quantos argumentos quisermos.
 func adder(args ...int) int {
   total := 0
   for _, v := range args { // Repete os argumentos, seja qual for o número.
@@ -389,7 +392,9 @@ switch char {
     fmt.Println("Should escape")
 }
 
-//Um switch de tipo é como uma instrução switch regular, mas os casos em um switch de tipo especificam tipos (não valores), e esses tipos são comparados com o tipo do valor mantido pelo valor de interface fornecido.
+// Um switch de tipo é como uma instrução switch regular, mas os casos
+// em um switch de tipo especificam tipos (não valores), e esses tipos são
+// comparados com o tipo do valor mantido pelo valor de interface fornecido.
 func do(i interface{}) {
   switch v := i.(type) {
     case int:
@@ -414,12 +419,12 @@ func main() {
 
 ```go
 var a [10]int // declara um array int com 10 de comprimento. O comprimento do array faz parte do tipo!
-a[3] = 42   // definine elementos
-i := a[3]   // lê elementos
+a[3] = 42     // definine elementos
+i := a[3]     // lê elementos
 
 // declara e inicializa
 var a = [2]int{1, 2}
-a := [2]int{1, 2} //forma abreviada
+a := [2]int{1, 2}   // forma abreviada
 a := [...]int{1, 2} // reticências -> Compilador calcula o comprimento do array
 ```
 
@@ -427,14 +432,14 @@ a := [...]int{1, 2} // reticências -> Compilador calcula o comprimento do array
 
 ```go
 var a []int                // declara um slice - semelhante a um array, mas o comprimento não é especificado
-var a = []int {1, 2, 3, 4}         // declara e inicializa um slice (apoiado pelo array dado implicitamente)
-a := []int{1, 2, 3, 4}           // forma abreviada
-chars := []string{0:"a", 2:"c", 1: "b"}  // ["a", "b", "c"]
+var a = []int {1, 2, 3, 4} // declara e inicializa um slice (apoiado pelo array dado implicitamente)
+a := []int{1, 2, 3, 4}     // forma abreviada
+chars := []string{0:"a", 2:"c", 1: "b"} // ["a", "b", "c"]
 
-var b = a[lo:hi]  // cria um slice (fatia de um array) do índice lo para hi-1
-var b = a[1:4]    // slice do índice 1 ao 3
-var b = a[:3]     // falta de índice baixo implica 0
-var b = a[3:]     // falta de índice alto implica len(a)
+var b = a[lo:hi]    // cria um slice (fatia de um array) do índice lo para hi-1
+var b = a[1:4]      // slice do índice 1 ao 3
+var b = a[:3]       // falta de índice baixo implica 0
+var b = a[3:]       // falta de índice alto implica len(a)
 a =  append(a,17,3) // acrescenta itens para o slice a
 c := append(a,b...) // concatena os slices a e b
 
@@ -646,13 +651,17 @@ func main() {
 ## Channels
 
 ```go
+// Blocos de channel sem buffer.
+// Lê os blocos quando nenhum valor estiver disponível,
+// escreve os blocos até que haja uma leitura.
 ch := make(chan int) // crie um channel do tipo int
 ch <- 42             // envia um valor para o channel ch.
 v := <-ch            // recebe um valor de ch
 
-// Blocos de channel sem buffer. Lê os blocos quando nenhum valor estiver disponível, escreve os blocos até que haja uma leitura.
 
-// Crie um channel com buffer. A gravação em channels com buffer não bloqueia a menos que o <tamanho do buffer> seja maior que valores não lidos forem gravados.
+// Cria um channel com buffer.
+// A gravação em channels com buffer não bloqueia a menos que
+// o <tamanho do buffer> seja maior que valores não lidos forem gravados.
 ch := make(chan int, 100)
 
 close(ch) // fecha o channel (apenas o sender deve fechar)
