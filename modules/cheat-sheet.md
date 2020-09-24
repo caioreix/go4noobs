@@ -325,30 +325,30 @@ for { // você pode omitir a condição == while(true){}
 // Use break/continue no loop atual
 // Use break/continue com etiqueta no laço externo
 here:
-  for i := 0; i < 2; i++ {
-    for j := i + 1; j < 3; j++ {
-      if i == 0 {
-        continue here
-      }
-      fmt.Println(j)
-      if j == 2 {
-        break
-      }
+for i := 0; i < 2; i++ {
+  for j := i + 1; j < 3; j++ {
+    if i == 0 {
+      continue here
+    }
+    fmt.Println(j)
+    if j == 2 {
+      break
     }
   }
+}
 
 there:
-  for i := 0; i < 2; i++ {
-    for j := i + 1; j < 3; j++ {
-      if j == 1 {
-        continue
-      }
-      fmt.Println(j)
-      if j == 2 {
-        break there
-      }
+for i := 0; i < 2; i++ {
+  for j := i + 1; j < 3; j++ {
+    if j == 1 {
+      continue
+    }
+    fmt.Println(j)
+    if j == 2 {
+      break there
     }
   }
+}
 ```
 
 ### Switch
@@ -647,8 +647,8 @@ func main() {
 
 ```go
 ch := make(chan int) // crie um channel do tipo int
-ch <- 42       // envia um valor para o channel ch.
-v := <-ch      // recebe um valor de ch
+ch <- 42             // envia um valor para o channel ch.
+v := <-ch            // recebe um valor de ch
 
 // Blocos de channel sem buffer. Lê os blocos quando nenhum valor estiver disponível, escreve os blocos até que haja uma leitura.
 
@@ -670,12 +670,12 @@ for i := range ch {
 // seleciona blocos em operações de múltiplos canais, se um desbloquear, o caso correspondente é executado
 func doStuff(channelOut, channelIn chan int) {
   select {
-  case channelOut <- 42:
-    fmt.Println("Poderíamos escrever para channelOut!")
-  case x := <- channelIn:
-    fmt.Println("Nós poderíamos ler de channelIn")
-  case <-time.After(time.Second * 1):
-    fmt.Println("tempo esgotado")
+    case channelOut <- 42:
+      fmt.Println("Poderíamos escrever para channelOut!")
+    case x := <- channelIn:
+      fmt.Println("Nós poderíamos ler de channelIn")
+    case <-time.After(time.Second * 1):
+      fmt.Println("tempo esgotado")
   }
 }
 ```
