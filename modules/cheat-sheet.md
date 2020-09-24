@@ -515,7 +515,7 @@ type Vertex struct {
 
 // Criando
 var v = Vertex{1, 2}
-var v = Vertex{X: 1, Y: 2} // Cria uma struct definindo valores com chaves
+var v = Vertex{X: 1, Y: 2}          // Cria uma struct definindo valores com chaves
 var v = []Vertex{{1,2},{5,2},{5,5}} // Inicializa um slice de structs
 
 // Acessando membros
@@ -549,7 +549,7 @@ point := struct {
 
 ```go
 p := Vertex{1, 2}  // p é um Vertex
-q := &p      // q é um ponteiro para um Vertex
+q := &p            // q é um ponteiro para um Vertex
 r := &Vertex{1, 2} // r também é um ponteiro para um Vertex
 
 // O tipo de um ponteiro para um Vertex é *Vertex
@@ -568,7 +568,8 @@ type Awesomizer interface {
 // tipos *não* declaram para implementar interfaces
 type Foo struct {}
 
-// em vez disso, os tipos satisfazem implicitamente uma interface se implementarem todos os métodos necessários
+// em vez disso, os tipos satisfazem implicitamente uma interface
+// se implementarem todos os métodos necessários
 func (foo Foo) Awesomize() string {
   return "Awesome!"
 }
