@@ -12,8 +12,9 @@
 
 ## Playground
 
-A [golang.org](https://play.golang.org) criou um serviço web chamado [playground](https://play.golang.org/) que compila, executa e mostra o output do código escrito pelo usuário. 
+A [golang.org](https://play.golang.org) criou um serviço web chamado [playground](https://play.golang.org/) que compila, executa e mostra o output do código escrito pelo usuário.
 É um serviço útil para poder testar a linguagem sem ter a necessidade de fazer a instalação e até mesmo para compartilhar código.
+
 ## Requisitos
 
 As distribuições binárias Go estão disponíveis para esses sistemas operacionais e arquiteturas suportados. Verifique se o seu sistema atende a esses requisitos antes de continuar. Se o seu sistema operacional ou arquitetura não estiver na lista, você poderá instalar a partir da fonte ou usar o gccgo.
