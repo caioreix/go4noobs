@@ -41,13 +41,30 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 ### Resumos
 
 - [Cheat Sheet](./modules/cheat-sheet.md#cheat-sheet)
-- Boas Práticas (EM BREVE!)
 
 ### Conteudos Detalhados
 
+> Como estou sem tempo de ficar atualizando o repositório constantemente, disponibilizei inúmeros links que serão extremamente importantes durante sua carreira com a linguagem Go, os que possuírem o emoji ⭐ são os que considero essenciais. Obs: sempre recomendo o uso das documentações em inglês pois são sempre as primeiras a serem atualizadas.
+
+#### Português
+
+- ⭐ [Aprenda go com testes](https://quii.gitbook.io/learn-go-with-tests/) (Simplesmente o melhor tutorial de go que já vi!)
+>
+- [Layout padrão de projetos em Go](https://github.com/golang-standards/project-layout/blob/master/README_ptBR.md) (Um layout básico para projetos em Go.)
 - [Um Tour Por GO](https://go-tour-br.appspot.com/welcome/1)
+
+#### Inglês
+
+- ⭐ [Learn Go with tests](https://quii.gitbook.io/learn-go-with-tests/) (Simplesmente o melhor tutorial de go que já vi!)
+- ⭐ [Go Style guide](https://github.com/bahlo/go-styleguide) (Um ótimo guia do que se deve realizar e não realizar em Go.)
+- ⭐ [Go advice](https://github.com/cristaloleg/go-advice) (Outro ótimo guia do que fazer e não realizar em Go, como provérbios e também o famoso "The Zen of Go")
+- ⭐ [Golang Cheat Sheet](https://github.com/a8m/golang-cheat-sheet) (Um ótimo repositório para relembrar a sintaxe e implementações uteis em Go.)
+- ⭐ [Go patterns](https://github.com/tmrts/go-patterns) (Uma coleção de designs e padrões de aplicação para a linguagem Go.)
+- ⭐ [Awesome Go](https://github.com/avelino/awesome-go) (Uma lista selecionada de incríveis frameworks, bibliotecas e software s em Go.)
+- ⭐ [Effective GO](https://golang.org/doc/effective_go.html) (Esta é uma documentação oficial que fornece dicas para escrever código Go claro e idiomático.)
+>
 - [How Write GO Code](https://golang.org/doc/code.html)
-- [Effective GO](https://golang.org/doc/effective_go.html)
+- [Standard Go Project Layout](https://github.com/golang-standards/project-layout) (Um layout básico para projetos em Go.)
 - [GO Wiki](https://github.com/golang/go/wiki)
 - [Learn GO](https://github.com/golang/go/wiki/Learn)
 - [Packages References](https://golang.org/pkg/)
@@ -73,7 +90,7 @@ são **extremamente apreciadas**
 
 ## Autores
 
-- **Caio Alexandre Reis de Almeida** - _Desenvolvedor_ - [@gaviusking](https://twitter.com/gaviusking)
+- **Caio Alexandre Reis de Almeida** - _Desenvolvedor_ - [@caioreix](https://twitter.com/caioreix)
 
 ---
 
