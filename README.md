@@ -58,6 +58,7 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 - ⭐ [Learn Go with tests](https://quii.gitbook.io/learn-go-with-tests/) (Simplesmente o melhor tutorial de go que já vi!)
 - ⭐ [Go Style guide](https://github.com/bahlo/go-styleguide) (Um ótimo guia do que se deve realizar e não realizar em Go.)
 - ⭐ [Go advice](https://github.com/cristaloleg/go-advice) (Outro ótimo guia do que fazer e não realizar em Go, como provérbios e também o famoso "The Zen of Go")
+- ⭐ [50 shades of go](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/) (Armadilhas, pegadinhas e erros comuns para novos desenvolvedores de Golang)
 - ⭐ [Golang Cheat Sheet](https://github.com/a8m/golang-cheat-sheet) (Um ótimo repositório para relembrar a sintaxe e implementações uteis em Go.)
 - ⭐ [Go patterns](https://github.com/tmrts/go-patterns) (Uma coleção de designs e padrões de aplicação para a linguagem Go.)
 - ⭐ [Awesome Go](https://github.com/avelino/awesome-go) (Uma lista selecionada de incríveis frameworks, bibliotecas e software s em Go.)
