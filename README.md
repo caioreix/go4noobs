@@ -49,8 +49,8 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 #### Português
 
 - ⭐ [Aprenda go com testes](https://quii.gitbook.io/learn-go-with-tests/) (Simplesmente o melhor tutorial de go que já vi!)
+- ⭐ [Layout padrão de projetos em Go](https://github.com/golang-standards/project-layout/blob/master/README_ptBR.md) (Um layout de como organizar sua estrutura de pastas em projetos GO.)
 >
-- [Layout padrão de projetos em Go](https://github.com/golang-standards/project-layout/blob/master/README_ptBR.md) (Um layout básico para projetos em Go.)
 - [Um Tour Por GO](https://go-tour-br.appspot.com/welcome/1)
 
 #### Inglês
@@ -63,9 +63,9 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 - ⭐ [Go patterns](https://github.com/tmrts/go-patterns) (Uma coleção de designs e padrões de aplicação para a linguagem Go.)
 - ⭐ [Awesome Go](https://github.com/avelino/awesome-go) (Uma lista selecionada de incríveis frameworks, bibliotecas e software s em Go.)
 - ⭐ [Effective GO](https://golang.org/doc/effective_go.html) (Esta é uma documentação oficial que fornece dicas para escrever código Go claro e idiomático.)
+- ⭐ [Standard Go Project Layout](https://github.com/golang-standards/project-layout) (Um layout de como organizar sua estrutura de pastas em projetos GO.)
 >
 - [How Write GO Code](https://golang.org/doc/code.html)
-- [Standard Go Project Layout](https://github.com/golang-standards/project-layout) (Um layout básico para projetos em Go.)
 - [GO Wiki](https://github.com/golang/go/wiki)
 - [Learn GO](https://github.com/golang/go/wiki/Learn)
 - [Packages References](https://golang.org/pkg/)
