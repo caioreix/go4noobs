@@ -52,6 +52,7 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 - ⭐ [Layout padrão de projetos em Go](https://github.com/golang-standards/project-layout/blob/master/README_ptBR.md) (Um layout de como organizar sua estrutura de pastas em projetos GO.)
 >
 - [Um Tour Por GO](https://go-tour-br.appspot.com/welcome/1)
+- [Aprenda Go](https://www.youtube.com/c/AprendaGo)
 
 #### Inglês
 
