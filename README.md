@@ -48,9 +48,9 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 
 #### Português
 
-- ⭐ [Aprenda go com testes](https://quii.gitbook.io/learn-go-with-tests/) (Simplesmente o melhor tutorial de go que já vi!)
+- ⭐ [Aprenda go com testes](https://larien.gitbook.io/aprenda-go-com-testes/) (Simplesmente o melhor tutorial de go que já vi!)
 - ⭐ [Layout padrão de projetos em Go](https://github.com/golang-standards/project-layout/blob/master/README_ptBR.md) (Um layout de como organizar sua estrutura de pastas em projetos GO.)
->
+- ⭐ [Aprenda Go](https://www.youtube.com/aprendago) (Curso de Go ministrado por @veekorbes)
 - [Um Tour Por GO](https://go-tour-br.appspot.com/welcome/1)
 
 #### Inglês
