@@ -33,6 +33,8 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 
 ## ROADMAP
 
+Recomendo que acessem o roadmap sobre a linguagem Go da [roadmap.sh](https://roadmap.sh/golang). Ele é constantemente atualizado e possui links para todos os passos. Esse repositório será utilizado para fornecer conteúdos e tutoriais adicionais ao roadmap.
+
 ### Introdução
 
 - [Introdução](./modules/introducao.md#introdução)
@@ -44,7 +46,7 @@ Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprend
 
 ### Conteudos Detalhados
 
-> Como estou sem tempo de ficar atualizando o repositório constantemente, disponibilizei inúmeros links que serão extremamente importantes durante sua carreira com a linguagem Go, os que possuírem o emoji ⭐ são os que considero essenciais. Obs: sempre recomendo o uso das documentações em inglês pois são sempre as primeiras a serem atualizadas.
+> Aqui temos inúmeros links que irão complementar o roadmap. Os que possuírem o emoji ⭐ são os que considero essenciais. Obs: sempre recomendo o uso das documentações em inglês, pois são sempre as primeiras a serem atualizadas.
 
 #### Português
 
