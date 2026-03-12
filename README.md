@@ -8,19 +8,21 @@
 
 <!-- Title -->
 
+<a id="go4noobs"></a>
+
 <p align="center">
   <h2 align="center">Go4noobs</h2>
 
   <h1 align="center"><img src="./images/go_logo.svg" alt="Golang" width="120"></h1>
-  
+
   <p align="center">
     <br />
-    <a href="#ROADMAP"><strong>Explore a documentação »</strong></a>
+    <a href="#roadmap"><strong>Explore a documentação »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/gaviusking/Go4Noobs/issues/new">Report Bug</a>
+    <a href="https://github.com/caioreix/go4noobs/issues/new">Report Bug</a>
     ·
-    <a href="https://github.com/gaviusking/Go4Noobs/issues/new">Request Feature</a>
+    <a href="https://github.com/caioreix/go4noobs/issues/new">Request Feature</a>
   </p>
 </p>
 
@@ -28,6 +30,14 @@
 
 ## Sobre o Projeto
 Esse 4Noobs tem o intuito de ajudar quem quer aprender Go ou simplesmente aprender sua primeira linguagem de programação.
+
+> Quer acompanhar conteúdo novo além do repositório? Eu posto constantemente guias interativos sobre features e atualizações do Go em [caioreix.com/posts](https://caioreix.com/posts).
+
+## Novidades desta atualização
+
+- O repositório agora usa `go.mod`, ficando compatível com o fluxo moderno do ecossistema Go.
+- Os links principais foram atualizados para `go.dev` e `pkg.go.dev`.
+- Foi criado um novo módulo com comandos e ferramentas modernas do dia a dia em Go.
 
 <!-- ROADMAP OF PROJECT -->
 
@@ -39,6 +49,7 @@ Recomendo que acessem o roadmap sobre a linguagem Go da [roadmap.sh](https://roa
 
 - [Introdução](./modules/introducao.md#introdução)
 - [Instalando](./modules/instalando.md#instalando)
+- [Ferramentas modernas](./modules/ferramentas-modernas.md#ferramentas-modernas)
 
 ### Resumos
 
@@ -53,7 +64,7 @@ Recomendo que acessem o roadmap sobre a linguagem Go da [roadmap.sh](https://roa
 - ⭐ [Aprenda go com testes](https://larien.gitbook.io/aprenda-go-com-testes/) (Simplesmente o melhor tutorial de go que já vi!)
 - ⭐ [Layout padrão de projetos em Go](https://github.com/golang-standards/project-layout/blob/master/README_ptBR.md) (Um layout de como organizar sua estrutura de pastas em projetos GO.)
 - ⭐ [Aprenda Go](https://www.youtube.com/aprendago) (Curso de Go ministrado por @veekorbes)
-- [Um Tour Por GO](https://go-tour-br.appspot.com/welcome/1)
+- [Um Tour Por Go](https://go-tour-br.appspot.com/tour/welcome/1)
 
 #### Inglês
 
@@ -64,20 +75,20 @@ Recomendo que acessem o roadmap sobre a linguagem Go da [roadmap.sh](https://roa
 - ⭐ [Golang Cheat Sheet](https://github.com/a8m/golang-cheat-sheet) (Um ótimo repositório para relembrar a sintaxe e implementações uteis em Go.)
 - ⭐ [Go patterns](https://github.com/tmrts/go-patterns) (Uma coleção de designs e padrões de aplicação para a linguagem Go.)
 - ⭐ [Awesome Go](https://github.com/avelino/awesome-go) (Uma lista selecionada de incríveis frameworks, bibliotecas e software s em Go.)
-- ⭐ [Effective GO](https://golang.org/doc/effective_go.html) (Esta é uma documentação oficial que fornece dicas para escrever código Go claro e idiomático.)
+- ⭐ [Effective Go](https://go.dev/doc/effective_go) (Esta é uma documentação oficial que fornece dicas para escrever código Go claro e idiomático.)
 - ⭐ [Standard Go Project Layout](https://github.com/golang-standards/project-layout) (Um layout de como organizar sua estrutura de pastas em projetos GO.)
 >
-- [How Write GO Code](https://golang.org/doc/code.html)
+- [How to Write Go Code](https://go.dev/doc/code)
 - [GO Wiki](https://github.com/golang/go/wiki)
 - [Learn GO](https://github.com/golang/go/wiki/Learn)
-- [Packages References](https://golang.org/pkg/)
-- [Language Spec](https://golang.org/ref/spec)
+- [Packages Reference](https://pkg.go.dev/std)
+- [Language Spec](https://go.dev/ref/spec)
 - [Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs&ab_channel=GoogleDevelopers) ([slides](https://talks.golang.org/2012/concurrency.slide#1))
 - [Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw&ab_channel=GoogleDevelopers) ([slides](https://talks.golang.org/2013/advconc.slide#1))
-- [Share Memory by Communicating](https://golang.org/doc/codewalk/sharemem/)
+- [Share Memory by Communicating](https://go.dev/doc/codewalk/sharemem/)
 - [A simple programming environment](https://vimeo.com/53221558) ([slides](https://talks.golang.org/2012/simple.slide))
-- [Writing Web Applications](https://golang.org/doc/articles/wiki/)
-- [First Class Functions in Go](https://golang.org/doc/codewalk/functions/)
+- [Writing Web Applications](https://go.dev/doc/articles/wiki/)
+- [First Class Functions in Go](https://go.dev/doc/codewalk/functions/)
 
 <!-- CONTRIBUTING -->
 ## Como Contribuir

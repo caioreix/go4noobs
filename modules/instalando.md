@@ -6,37 +6,48 @@
 
 - [Playground](#playground)
 
-- [Requisitos](#requisitos)
+- [Instalação rápida](#instalação-rápida)
 
-- [Downloads](#downloads)
+- [Verificando o ambiente](#verificando-o-ambiente)
+
+- [Próximos passos](#próximos-passos)
 
 ## Playground
 
-A [golang.org](https://play.golang.org) criou um serviço web chamado [playground](https://play.golang.org/) que compila, executa e mostra o output do código escrito pelo usuário.
-É um serviço útil para poder testar a linguagem sem ter a necessidade de fazer a instalação e até mesmo para compartilhar código.
+A equipe do Go mantém um playground oficial em [go.dev/play](https://go.dev/play), onde você pode compilar, executar e compartilhar exemplos rapidamente, sem instalar nada na sua máquina.
 
-## Requisitos
+## Instalação rápida
 
-As distribuições binárias Go estão disponíveis para esses sistemas operacionais e arquiteturas suportados. Verifique se o seu sistema atende a esses requisitos antes de continuar. Se o seu sistema operacional ou arquitetura não estiver na lista, você poderá instalar a partir da fonte ou usar o gccgo.
+Hoje a melhor referência para instalação é a documentação oficial, porque os sistemas suportados mudam com o tempo. Em vez de manter uma tabela que envelhece rápido, siga este fluxo:
 
-| Sistema Operacional               | Arquiteturas                           | Notas                                                                           |
-|-----------------------------------|----------------------------------------|---------------------------------------------------------------------------------|
-| FreeBSD 10.3 or later             | amd64, 386                             | Debian GNU / kFreeBSA not supported                                             |
-| Linux 2.6.23 or later with glibc  | amd64, 386, arm, arm64, s390x, ppc64le | CentOS / RHEL 5.x not supported. Intall from source for other libc.             |
-| macOS 10.11 or later              | amd64                                  | use the clang or gcc that comes with Xcode for ```cgo``` support.               |
-| Windows 7, Server 2008R2 or later | amd64, 386                             | use MinGW(```386```) or MinGW-W64(```amd64```) gcc. No need for cygwin or msys. |
+1. Acesse a página de downloads: [go.dev/dl](https://go.dev/dl/).
+2. Escolha o instalador para o seu sistema operacional.
+3. Remova instalações antigas antes de instalar a nova versão.
+4. Garanta que o binário do Go esteja no `PATH`.
+5. Confira se tudo funcionou com `go version`.
 
-Um compilador C é necessário apenas se você planeja usar o cgo.
+### Downloads
 
-Você só precisa instalar as ferramentas de linha de comando do Xcode. Se você já instalou o Xcode 4.3+, poderá instalá-lo na guia Componentes do painel de preferências de Downloads.
+- [Windows](https://go.dev/dl/)
+- [Linux](https://go.dev/dl/)
+- [macOS](https://go.dev/dl/)
+- [Source](https://go.dev/dl/)
 
-## Downloads
+## Verificando o ambiente
 
-- [Windows](https://golang.org/dl/)
-- [Linux](https://golang.org/dl/)
-- [macOS](https://golang.org/dl/)
-- [Source](https://golang.org/dl/)
+Depois da instalação, rode:
 
-Para um passo a passo basta seguir a [documentação](https://golang.org/doc/install).
+```bash
+go version
+go env GOPATH GOMODCACHE
+```
+
+Se esses comandos responderem corretamente, seu ambiente já está pronto para começar.
+
+## Próximos passos
+
+- [Documentação oficial de instalação](https://go.dev/doc/install)
+- [Managing Go installations](https://go.dev/doc/manage-install)
+- [Tutorial: Get started with Go](https://go.dev/doc/tutorial/getting-started)
 
 [← Pagina Inicial](../README.md#go4noobs)

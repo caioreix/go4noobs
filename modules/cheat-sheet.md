@@ -38,7 +38,7 @@
 
 ## Créditos
 
-Esse módulo foi criado e modificado a partir do repositório [golang-cheat-sheet](https://github.com/a8m/golang-cheat-sheet). A maioria dos códigos de exemplo tirados de [Um tour por Go](https://go-tour-br.appspot.com), que é uma excelente introdução ao Go.
+Esse módulo foi criado e modificado a partir do repositório [golang-cheat-sheet](https://github.com/a8m/golang-cheat-sheet). A maioria dos códigos de exemplo veio de [A Tour of Go](https://go.dev/tour/welcome/1), que continua sendo uma excelente introdução à linguagem.
 Se você é novo no Go, faça esse tour. Seriamente.
 
 ## Go em poucas palavras
@@ -49,7 +49,7 @@ Se você é novo no Go, faça esse tour. Seriamente.
 * Compila para código nativo(sem JVM)
 * Sem classes, mas estruturas com métodos
 * interfaces
-* Sem herança de implementação. Apesar disso, há ['type embedding'](http://golang.org/doc/effective%5Fgo.html#embedding).
+* Sem herança de implementação. Apesar disso, há ['type embedding'](https://go.dev/doc/effective_go#embedding).
 * Funções são cidadãos de primeira classe
 * As funções podem retornar vários valores
 * Possue closures
@@ -276,7 +276,7 @@ u := uint(f)
 ## Pacotes
 
 * Declaração de pacote no topo de cada arquivo fonte
-* Os executáveis ​​estão no pacote `main`
+* Os executáveis estão no pacote `main`
 * Convenção: nome do pacote == sobrenome do caminho de importação (caminho de importação `math/rand` => pacote `rand`)
 * Identificador de maiúsculas: exportado (visível de outros pacotes)
 * Identificador em minúsculas: privado (não é visível em outros pacotes)
@@ -596,7 +596,7 @@ type Server struct {
 // inicialize o tipo incorporado da maneira usual
 server := &Server{"localhost", 80, log.New(...)}
 
-// métodos implementados na estrutura incorporada são passados ​​por
+// métodos implementados na estrutura incorporada são passados por
 server.Log(...) // chama server.Logger.Log(...)
 
 // o nome do campo do tipo incorporado é o seu nome de tipo (neste caso Logger)
